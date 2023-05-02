@@ -1,0 +1,7 @@
+body{-moz-osx-font-smoothing:grayscale;font-smooth:auto;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-family:system-ui,-apple-system, BlinkMacSystemFont,Tahoma,"Segoe UI",
+Roboto, Oxygen, Ubuntu, Cantarell,"Fira Sans","Droid Sans","Helvetica Neue";font-size:12px;line-height:1.5;height:100%;font-weight:400}
+.style-table { border:0;padding:0;border-collapse:collapse;border-spacing:0;letter-spacing:1px;}
+.style-table tr { border: 0;padding: 5px; }
+.style-table th, .style-table td { padding: 5px;text-transform:uppercase}
+.style-table td { border:1px solid #ccc; }
+.style-table th { border:1px solid #ccc; }	

@@ -1,0 +1,12 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project			:	Container Yard and Workshop Assistance 
+Begin Project	:   September 2017
+Programmer		:	Stevanus Andika Nasution
+-------------------------------------------------------------------*/
+
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Play:100,200,300,400,600,700");
+@import url("fontawesome/css/font-awesome.min.css");
+@import url("common.css");
+@import url("w3.css");
