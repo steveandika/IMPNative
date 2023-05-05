@@ -19,9 +19,11 @@
 			<div class="row">
 				<div class="colm-form">
 					<div class="form-container">
-						<input type="text" placeholder="Email address or phone number">
-						<input type="password" placeholder="Password">
-						<button class="btn-login">Login</button>
+						<form class="login" method="post" action="e-imp/validation_access">
+							<input type="text" placeholder="UserID" id="username" name="username"  autofocus />
+							<input type="password" placeholder="Password" id="password" name="password" />
+							<button class="btn-login">Login</button>
+						</form>	
 					</div>
 				</div>
 			</div>	
