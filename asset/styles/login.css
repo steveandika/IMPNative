@@ -13,19 +13,19 @@ body {
 	background: #E2E2E2;
 	margin:0;
 	padding:0; 
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 .login-form-wrap {
-	background: radial-gradient(ellipse at center,  rgba(81,112,173,1) 0%,rgba(53,84,147,1) 100%);
-	border:1px solid #2d416d;
-	box-shadow: 0 1px #5670A4 inset, 0 0 10px 5px rgba(0, 0, 0, 0.1);
-	border-radius: 5px;
-	width: 360px;
-	height: 380px;
-	margin: 60px auto;
-	padding: 50px 30px 0 30px;
-	text-align: center;
+	background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px; 
 	
 	h1 {
 		margin: 0 0 50px 0;
