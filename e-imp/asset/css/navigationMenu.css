@@ -1,0 +1,94 @@
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-decoration:none;
+  background-color: #fff; /*#273746;*/
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+nav ul{
+  list-style: none;
+  position: relative;
+  margin:0;
+  padding:0;
+  float: left;
+  display: inline-table;
+}
+
+nav ul li{
+  margin-left:20px;
+  float: left;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+/*nav ul li:hover{background: rgba(0,0,0,.15);}*/
+nav ul li:hover > ul{display: block;}
+
+nav ul li a{
+  display: block; 
+  padding: 20px 6px;
+  color: #222; 
+/*font-size: 0.75em;
+letter-spacing: 1px;*/
+  text-decoration: none;  
+}
+
+nav ul li a:hover {background: rgba(0,0,0,.15)}
+
+nav ul ul{
+  display: none;
+  background: #fff;
+  position: absolute; 
+  top: 100%;
+  box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+nav ul ul li{float: none; position: relative;}
+
+nav ul ul li a {
+  padding: 2px 30px; 
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  color:#2980b9;
+}
+
+nav ul ul li #login-content {
+/*splay: none;
+position: absolute;
+top: 55px; 
+right: 0;
+left:130px;*/
+z-index: 999; 
+  background: #fff;
+  background-image: linear-gradient(top, #fff, #eee);
+/*x-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+border-radius: 3px 0 3px 3px;*/
+}
+
+nav ul ul li a:hover {
+/*  text-decoration:underline;*/
+  color:#2980b9;
+  line-height:20px;
+  background: rgba(0,0,0,.15)
+}
+
+nav ul ul ul {
+  position: absolute; 
+  left: 100%; 
+  top:0;
+}
+
+nav #login {
+  /*border-right: 1px solid rgba(0,0,0,.1);*/
+  box-shadow: 1px 0 0 #ecf0f1;/*#fff;*/
+}
+nav #login-trigger {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  text-decoration: none;
+}  

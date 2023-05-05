@@ -1,0 +1,71 @@
+header {
+/*	
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 54px;
+  background: #2196F3; 
+  box-shadow: rgba(0, 0, 0, 0.5) 0 -20px 20px 20px;
+*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 53px;
+  background: #2196F3;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 -20px 20px 20px;  
+}
+
+header h1 {
+/*
+  margin: 0;
+  padding: 0 15px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  float: left;
+*/
+  margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:500;font-size:18px;float:left  
+}
+
+.wrapper {
+/*	
+  position:absolute;
+  top:55px;	
+  right:2px;
+  bottom:0;
+  left:200px;
+  height:auto;
+  overflow-y:auto;  
+*/
+  position:relative;	
+  z-index:1;
+  top:55px;	
+  right:2px;
+  bottom:0;
+  height:auto;
+  overflow-y:auto;  
+  
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* Small devices (tablets)
+==========================*/
+@media all and (max-width: 768px) {
+  .wrapper {/*margin-top: 50px;*/top:50px;left:2px}
+}
+
+/* Medium devices (desktops)
+==========================*/
+@media (min-width: 992px) {
+  body {/*overflow-y: scroll;*/}
+  .logo img {width: 200px;text-align: center;margin-top: 10px;float: none;}
+  .wrapper {margin-left: 200px;}
+  .wrapper__minify {margin-left: 50px;}
+}
