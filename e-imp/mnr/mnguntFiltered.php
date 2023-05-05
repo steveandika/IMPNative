@@ -67,8 +67,9 @@
 	$result=mssql_query($query);          
 	while($arr = mssql_fetch_array($result)) 
 	{
-		$principle="";
-		$consigne="";
+		$principle = "";
+		$consigne = "";
+		$estimateDate = "";
   
 		if($arr['principle']!="") { $principle = haveCustomerName($arr['principle']); }
 		
