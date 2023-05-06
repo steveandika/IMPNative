@@ -38,12 +38,12 @@ footer {
 }
 
 .colm-logo {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
     text-align: left;
 }
 
 .colm-form {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
     text-align: center;
 }
 
