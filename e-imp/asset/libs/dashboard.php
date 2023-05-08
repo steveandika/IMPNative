@@ -71,6 +71,10 @@
 		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-waitingapp.php").'" class="sub-menu-link padding-left-15">Waiting Approval</a>'; 
         $html .= '<a href="?p=w_fns" class="sub-menu-link">Waiting C/R</a>';
 		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-sumRepair.php").'" class="sub-menu-link padding-left-15">Summary Repair</a>'; 
+		$html .= '<a href="#" class="sub-menu-link padding-left-15">EoR Belum Ditagihkan - IConS</a>'; 
+		$html .= '<a href="#" class="sub-menu-link padding-left-15">EoR Belum Ditagihkan - PDF</a>'; 
+		$html .= '<a href="#" class="sub-menu-link padding-left-15">EoR Sudah Ditagihkan - Waiting Invoice ID</a>'; 
+		$html .= '<a href="#" class="sub-menu-link padding-left-15">EoR Sudah Ditagihkan - Complete</a>'; 
 		$html .= '<div class="height-5"></div>';
 		
 		$html .= '</div>';
