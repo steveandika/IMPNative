@@ -3,7 +3,8 @@
     $defHTML = $_SESSION['defurl'];
   
 	$groupFin = array("AKU2182","DAP2203","HNA2171","JUN2171","JNU2183","LYA2211","RAN2182","JOK001","ROOT", "RSO2171","RYO2201","SRE2211");
-	$groupRoot = array("JOK001", "ROOT");		
+	$groupRoot = array("JOK001", "ROOT");	
+    $masterData = array("ROK2171", "JOK001","ROOT")
 ?>
 
 <div class="headerDiv">
@@ -24,18 +25,13 @@
 		$html .= '<a href="?p=private" class="menu-link"><span class="menu-label">Change Password</label></a>';
 		$html .= '<div class="height-10"></div>';
 		
-		if(validMenuAccess("15") == 1) 
+		$html .= '<button class="dropdown-btn border-radius-3">Master Data<i class="fa fa-caret-down"></i></button>';
+		$html .= '<div class="dropdown-container"><div class="height-5"></div>';
+		
+		if (in_array(strtoupper($_SESSION['uid']), $masterData)) 
 		{ 
-			$html .= '<button class="dropdown-btn border-radius-3">Master Data<i class="fa fa-caret-down"></i></button>';
-			$html .= '<div class="dropdown-container"><div class="height-5"></div>';	
-			$html .= '<a href="?p=vcust" class="sub-menu-link padding-left-15">Customer</a>'; 
-		}
-		if(validMenuAccess("18") == 1) 
-		{ 
-		    $html .= '<a href="?p=wrk" class="sub-menu-link padding-left-15">Workshop Location</a>'; 
-		}
-		if(validMenuAccess("19")==1) 
-		{ 
+			$html .= '<a href="?p=vcust" class="sub-menu-link padding-left-15">Customer</a>';
+			$html .= '<a href="?p=wrk" class="sub-menu-link padding-left-15">Workshop Location</a>'; 
 			$html .= '<a href="?p=pr_mnr" class="sub-menu-link padding-left-15">Price List</a>'; 
 			$html .= '<a href="?p=cedexBrowse" class="sub-menu-link padding-left-15">Manage Price List</a>'; 
 		}
