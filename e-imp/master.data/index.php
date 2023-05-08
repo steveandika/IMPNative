@@ -30,26 +30,31 @@
 			include("../asset/libs/common.php");		
 			include("../asset/libs/dashboard.php");
 			mssql_close($dbSQL);
+			
+			$masterData = array("ROK2171", "JOK001","ROOT")
 	?>
   
 			<div class="wrapper">
 				<div class="se-pre-con" id="loader-icon" style="display:none"></div>
 				<?php 
-					if(isset($_GET['show']) && $_GET['show']=="pr_mnr") { include($_GET['show'].".php"); }
-					if(isset($_GET['do'])) 
+					if (in_array(strtoupper($_SESSION['uid']), $masterData)) 
 					{
-						include("pr_mnr.php");	
-	      
-						if($_GET['do']=="upload") {include("price_list.php");}
-						if($_GET['do']=="upload-log") {include($_GET['do'].".php");}
-						if($_GET['do']=="cedex-manage") {include("cedexSearch.php");}	  
-						if($_GET['do']=="cedexQuery") {include($_GET['do'].".php");}  	  
-					} 
+						if(isset($_GET['show']) && $_GET['show']=="pr_mnr") { include($_GET['show'].".php"); }
+						if(isset($_GET['do'])) 
+						{
+							include("pr_mnr.php");	
+	                    
+							if($_GET['do']=="upload") {include("price_list.php");}
+							if($_GET['do']=="upload-log") {include($_GET['do'].".php");}
+							if($_GET['do']=="cedex-manage") {include("cedexSearch.php");}	  
+							if($_GET['do']=="cedexQuery") {include($_GET['do'].".php");}  	  
+						} 
+					}	
 				?> 
 		
 				<div id="result">
 					<?php 
-						if(isset($_GET["show"])) 
+						if(isset($_GET["show"]) && in_array(strtoupper($_SESSION['uid']), $masterData)) 
 						{
 							if($_GET["show"] == "vcust") 
 							{ 
@@ -64,7 +69,7 @@
 		
 				<div id="process">
 					<?php 
-						if(isset($_GET['job'])) 
+						if(isset($_GET['job']) && in_array(strtoupper($_SESSION['uid']), $masterData)) 
 						{ 
 							if($_GET['job']=="cm") {include("cedexManage.php");}  	
 						} 
