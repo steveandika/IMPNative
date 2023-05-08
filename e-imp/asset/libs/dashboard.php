@@ -24,10 +24,10 @@
 		$html .= '<a href="?p=private" class="menu-link"><span class="menu-label">Change Password</label></a>';
 		$html .= '<div class="height-10"></div>';
 		
-		$html .= '<button class="dropdown-btn border-radius-3">Master Data<i class="fa fa-caret-down"></i></button>';
-		$html .= '<div class="dropdown-container"><div class="height-5"></div>';
 		if(validMenuAccess("15") == 1) 
 		{ 
+			$html .= '<button class="dropdown-btn border-radius-3">Master Data<i class="fa fa-caret-down"></i></button>';
+			$html .= '<div class="dropdown-container"><div class="height-5"></div>';	
 			$html .= '<a href="?p=vcust" class="sub-menu-link padding-left-15">Customer</a>'; 
 		}
 		if(validMenuAccess("18") == 1) 
