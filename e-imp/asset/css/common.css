@@ -336,7 +336,7 @@ float: left;height: 30px;padding: 0;width: 100px;cursor: pointer;font: bold 14px
 /* search style */
 form.search input[type=text],select 
 {
-	padding: 4px;
+	padding: 6px;
 	border: 1px solid #ccc;
 	float: left;
 	width: 80%;
