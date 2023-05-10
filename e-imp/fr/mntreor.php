@@ -5,19 +5,19 @@
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
 		<table class="w3-table">
 			<tr>
-				<td style="padding: 6px 6px"><label style="font-weight:500">Estimate Date</label></td>
+				<td><label style="font-weight:500">Estimate Date</label></td>
 			</tr>
 			<tr>
-				<td style="padding: 6px 6px"><input type="date" class="w3-input w3-border" name="estimate1" required /></td>
+				<td><input type="date" class="w3-input w3-border" name="estimate1" required /></td>
 			</tr>
 			<tr>
-				<td style="padding: 6px 6px"><label style="font-weight:500">until</label></td>
+				<td><label style="font-weight:500">until</label></td>
 			</tr>
 			<tr>
-				<td style="padding: 6px 6px"><input type="date" class="w3-input w3-border" name="estimate2" required /></td>
+				<td><input type="date" class="w3-input w3-border" name="estimate2" required /></td>
 			</tr>
 			<tr>
-				<td style="padding: 6px 6px"><label style="font-weight:500">Monitoring Type</label></td>
+				<td><label style="font-weight:500">Monitoring Type</label></td>
 			</tr>
 			<tr>
 				<td>
