@@ -3,37 +3,25 @@
 		<h1>Monitoring Estimate of Repair Billing</h1>
 		<div class="height-20"></div>
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
-		<table class="w3-table" style="border-style:none!important">
-			<tr>
-				<td><label style="font-weight:500">Estimate Date</label></td>
-			</tr>
-			<tr>
-				<td><input type="date" class="w3-border border-radius-3" name="estimate1" required /></td>
-			</tr>
-			<tr>
-				<td><label style="font-weight:500">until</label></td>
-			</tr>
-			<tr>
-				<td><input type="date" class="w3-border border-radius-3" name="estimate2" required /></td>
-			</tr>
-			<tr>
-				<td><label style="font-weight:500">Monitoring Type</label></td>
-			</tr>
-			<tr>
-				<td>
-					<select class="w3-input w3-border border-radius-3" name="HampName" required />
-						<option value="EoRIConS">"Eor IConS belum ditagihkan"</option>
-						<option value="EoRPDF">"Eor Pelayaran belum ditagihkan"</option>
-						<option value="EoRInv">"Eor Sudah ditagihkan belum ada No. Invoice"</option>
-						<option value="EoRIComplete">"Lengkap"</option>
-					</select>
-				</td>
-			</tr>			
-		</table>
-
+		<div id="inside-wrapper">
+			<label style="font-weight:500">Estimate Date</label>
+            <input type="date" name="estimate1" required />
+			<div class="height-10"></div>   
+            <label style="font-weight:500">until</label></td>
+			<input type="date" name="estimate2" required />
+			<div class="height-10"></div>   
+			<label style="font-weight:500">Monitoring Type</label>
+			<select class="w3-input w3-border border-radius-3" name="HampName" required />
+				<option value="EoRIConS">Eor IConS belum ditagihkan</option>
+				<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
+				<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
+				<option value="EoRIComplete">Lengkap</option>
+			</select>
+		</div>
+		
 		<div class="height-30" style="border-bottom: 1px solid #7a7a52"></div>
 		<div class="height-20"></div>
-		<input type="submit" class="w3-button w3-blue" style="border-radius:8px" name="register" value="Start Gather Data" />						
+		<input type="submit" class="w3-button w3-blue" style="border-radius:5px" name="register" value="Start Gather Data" />						
         
 	</form>
 	  
