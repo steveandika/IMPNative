@@ -3,9 +3,9 @@
 		<h1>Monitoring Estimate of Repair Billing</h1>
 		<div class="height-20"></div>
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
-		<table class="w3-table" style="border:0px!important">
+		<table class="w3-table">
 			<tr>
-				<td><label style="font-weight:500">Estimate Date</label></td>
+				<td style="border:0px!important"><label style="font-weight:500">Estimate Date</label></td>
 			</tr>
 			<tr>
 				<td><input type="date" class="w3-input w3-border" name="estimate1" required /></td>
