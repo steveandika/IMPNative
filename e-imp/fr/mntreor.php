@@ -5,13 +5,13 @@
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
 		<div id="inside-wrapper">
 			<label style="font-weight:500">Estimate Date</label>
-            <input type="date" name="estimate1" required />
+            <input type="date" class="w3-input w3-border" name="estimate1" required />
 			<div class="height-10"></div>   
             <label style="font-weight:500">until</label></td>
-			<input type="date" name="estimate2" required />
+			<input type="date" class="w3-input w3-border" name="estimate2" required />
 			<div class="height-10"></div>   
 			<label style="font-weight:500">Monitoring Type</label>
-			<select class="w3-input w3-border border-radius-3" name="HampName" required />
+			<select class="w3-input w3-border" name="HampName" required />
 				<option value="EoRIConS">Eor IConS belum ditagihkan</option>
 				<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
 				<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
