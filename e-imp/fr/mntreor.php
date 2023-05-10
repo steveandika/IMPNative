@@ -21,7 +21,7 @@
 			</tr>
 			<tr>
 				<td>
-					<select class="w3-input w3-border name="HampName" required />
+					<select class="w3-select w3-border name="HampName" required />
 						<option value="EoRIConS">Eor IConS belum ditagihkan</option>
 						<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
 						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
