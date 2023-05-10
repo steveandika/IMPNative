@@ -468,11 +468,6 @@ font-family:Tahoma;font-size:0.96em;padding:4px 24px;text-decoration:none;}
 .imp-row-padding>.imp-quarter,.imp-row-padding>.imp-col{padding:0 8px}
 .imp-col,.imp-half,.imp-third,.imp-twothird,.imp-threequarter,.imp-quarter{float:left}
 
-/* table style */
-table {border-collapse: collapse;border-spacing: 0;width:100%;border:1px solid #ccc;}
-/*th {border: 1px solid #ddd!important}*/
-th, td {text-align:left;vertical-align:top;padding:3px;}  
-td {border:1px solid #ddd}
 
 .imp-table {border:0;padding:0;border-spacing:0;letter-spacing:1px;font-weight:normal}
 .imp-table tr {border: 0;padding: 3px;}
