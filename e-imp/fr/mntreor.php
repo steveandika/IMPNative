@@ -8,20 +8,20 @@
 				<td><label style="font-weight:500">Estimate Date</label></td>
 			</tr>
 			<tr>
-				<td><input type="date" name="estimate1" required /></td>
+				<td><input type="date" class="w3-input w3-border" name="estimate1" required /></td>
 			</tr>
 			<tr>
 				<td><label style="font-weight:500">until</label></td>
 			</tr>
 			<tr>
-				<td><input type="date" name="estimate2" required /></td>
+				<td><input type="date" class="w3-input w3-border" name="estimate2" required /></td>
 			</tr>
 			<tr>
 				<td><label style="font-weight:500">Monitoring Type</label></td>
 			</tr>
 			<tr>
 				<td>
-					<select class="w3-input w3-border border-radius-3" name="HampName" required />
+					<select class="w3-input w3-border name="HampName" required />
 						<option value="EoRIConS">Eor IConS belum ditagihkan</option>
 						<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
 						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
