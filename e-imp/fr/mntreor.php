@@ -3,7 +3,7 @@
 		<h1>Monitoring Estimate of Repair Billing</h1>
 		<div class="height-20"></div>
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
-		<table class="w3-table">
+		<table class="w3-table" style="border:0px!important">
 			<tr>
 				<td><label style="font-weight:500">Estimate Date</label></td>
 			</tr>
