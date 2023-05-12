@@ -24,8 +24,8 @@
 		public  
 		function get_rows($fields, $id = NULL, $tablename = NULL)  
 		{  
-			$cn = !emptyempty($id) ? " WHERE $id " : " ";  
-			$fields = !emptyempty($fields) ? $fields : " * ";  
+			$cn = !empty($id) ? " WHERE $id " : " ";  
+			$fields = !empty($fields) ? $fields : " * ";  
 			$sql = "SELECT $fields FROM $tablename $cn";  
 			$results = $this -> query_executed($sql);  
 			$rows = $this -> get_fetch_data($results);  
