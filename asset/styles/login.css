@@ -53,9 +53,10 @@ footer {
 
 .colm-logo h2 {
     font: 26px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 0 30px;
     line-height: 32px;
+	color:#ddd;
 }
 
 .colm-form .form-container {
