@@ -1,6 +1,7 @@
 <?php
 	include("../asset/libs/new_db.php");
 	
+	echo $_POST["HampName"];
 	if(isset($_POST["HampName"])) 
 	{
 		$obj = new DatabaseClass ();
