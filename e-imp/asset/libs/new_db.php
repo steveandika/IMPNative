@@ -9,7 +9,7 @@
 		public  
 		function __construct()  
 		{  
-			mssql_connect($this - > host, $this - > username, $this - > password) or die(mssql_get_last_message);  
+			mssql_connect($this -> host, $this -> username, $this -> password) or die(mssql_get_last_message);  
 			mssql_select_db('CSSCY') or die(mssql_get_last_message);  
 		}
 		
