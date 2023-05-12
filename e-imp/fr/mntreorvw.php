@@ -10,7 +10,9 @@
 		if($op == "EoRIConS")
 		{
 			$rsl = $obj -> get_rows("shortName,workshopID" ,'' ,"VIEW_MonitoringWaitingInv GROUP BY shortName,workshopID");
-			include("layout1mntreor.php");
+	echo "<pre>";  
+	print_r($rsl);  
+	echo "</pre>";  
 		}
 	}
 ?>
