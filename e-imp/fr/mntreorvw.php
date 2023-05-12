@@ -1,15 +1,14 @@
 <?php
 	include("../asset/libs/new_db.php");
 	
-	echo "Aaaa";
-	if(isset($_GET["HampName"])) 
+	if(isset($_POST["HampName"])) 
 	{
 		$obj = new DatabaseClass ();
 		
-		$op = $_GET["HampName"];
+		$op = $_POST["HampName"];
 		if($op == "EoRIConS")
 		{
-			$rsl = $obj -> get_rows("shortName,workshopID" ,'' ,"VIEW_MonitoringWaitingInv GROUP BY shortName,workshopID");
+			$rsl = $obj -> get_rows(implode(",",array("shortName","workshopID")) ,'' ,"VIEW_MonitoringWaitingInv GROUP BY ".implode(",", array("shortName", "workshopID")));
 	echo "<pre>";  
 	print_r($rsl);  
 	echo "</pre>";  
