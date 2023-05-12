@@ -31,9 +31,7 @@
 	<div class="height-20"></div>
     <div id="loader-icon" class="border-radius-3" style="display:none;">..Gathering information, please wait</div>
     <div id="summaryView"></div>	  
-	 	
-
-	
+	 		
 <script type="text/javascript">
     $(document).ready(function(){  
         $("#summaryHamparan").submit(function(event){
