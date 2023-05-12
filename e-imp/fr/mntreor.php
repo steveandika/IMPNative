@@ -1,5 +1,5 @@
 	<div class="height-10"></div>
-	<form class="rpt border-radius-3" id="summaryHamparan" method="get" action="fr/mntreorvw" target="mntreorWd"> 
+	<form class="rpt border-radius-3" id="summaryHamparan" method="post" action="fr/mntreorvw" target="mntreorWd"> 
 		<h1>Monitoring Estimate of Repair Billing</h1>
 		<div class="height-20"></div>
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
@@ -34,7 +34,7 @@
 		
 		<div class="height-30" style="border-bottom: 1px solid #7a7a52"></div>
 		<div class="height-20"></div>
-		<input type="submit" class="w3-button w3-blue" style="border-radius:5px" name="register" value="Start Gather Data" />						
+		<input type="submit" class="w3-button w3-blue" style="border-radius:5px" name="register" value="View" />						
         
 	</form>
 	  
