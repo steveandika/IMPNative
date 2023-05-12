@@ -1,5 +1,5 @@
 	<div class="height-10"></div>
-	<form class="rpt border-radius-3" id="summaryHamparan" method="post"> 
+	<form class="rpt border-radius-3" id="summaryHamparan" method="post" action="fr/mntreorvw" target="mntreorWd"> 
 		<h1>Monitoring Estimate of Repair Billing</h1>
 		<div class="height-20"></div>
 		<div class="height-30" style="border-top: 1px solid #7a7a52"></div>
