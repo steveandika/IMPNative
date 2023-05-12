@@ -185,4 +185,4 @@ footer small {
     font-size: 11px;
 }
 
-@media (min-width:993px) { .row {flex-direction: column; } }	
+@media (max-width:800px) { .row {flex-direction: column; } }	
