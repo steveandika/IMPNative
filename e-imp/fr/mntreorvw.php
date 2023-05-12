@@ -1,5 +1,5 @@
 <?php
-	include("new_db.php");
+	include("../asset/libs/new_db.php");
 	
 	if(isset($_POST["HampName"])) 
 	{
