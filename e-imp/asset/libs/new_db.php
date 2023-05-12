@@ -27,8 +27,8 @@
 			$cn = !emptyempty($id) ? " WHERE $id " : " ";  
 			$fields = !emptyempty($fields) ? $fields : " * ";  
 			$sql = "SELECT $fields FROM $tablename $cn";  
-			$results = $this - > query_executed($sql);  
-			$rows = $this - > get_fetch_data($results);  
+			$results = $this -> query_executed($sql);  
+			$rows = $this -> get_fetch_data($results);  
 			return $rows;  
 		}  
     
