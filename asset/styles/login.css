@@ -27,6 +27,7 @@ footer {
 
 .row {
     display: flex;
+	flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -183,3 +184,5 @@ footer ol li a:hover {
 footer small {
     font-size: 11px;
 }
+
+@media (min-width:993px) { .row {flex-direction: column; } }	
