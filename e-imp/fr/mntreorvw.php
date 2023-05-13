@@ -8,7 +8,7 @@
 		$op = $_POST["HampName"];
 		if($op == "EoRIConS")
 		{
-			$rsl = $obj -> get_listEoRWaitingBilled(implode(",",array("shortName","workshopID")));
+			$rsl = $obj -> get_listEoRWaitingBilled();
 			include("layout1mntreor.php");
 		}
 	}
