@@ -17,11 +17,24 @@
 						<th>Index</th>
 						<th>Shipping Line</th>
 						<th>Hamparan</th>
-						<th style='text-align:right;'>Owner</th>
-						<th style='text-align:right;'>User 1</th>
-						<th style='text-align:right;'>User 2</th>
-						<th style='text-align:right;'>3rdParty</th>
-						<th style='text-align:right;'>Total Line</th>
+						<?php 
+							$html = "";
+							
+							if($op == "EoRIConS")
+							{
+								$html .= "<th style='text-align:right;'>Owner</th>";
+								$html .= "<th style='text-align:right;'>User 1</th>";
+								$html .= "<th style='text-align:right;'>User 2</th>";
+								$html .= "<th style='text-align:right;'>3rdParty</th>";
+							}
+							
+							if($op == "EoRPDF")
+							{
+								$html .= "<th style='text-align:right;'>Total Before Tax</th>";								
+							}
+							
+							echo $html;
+						?>
 					</tr>
 				
 					<?php	
@@ -31,17 +44,25 @@
 							for( $i = 0; $i < count($rsl); $i++ ) 
 							{
 								$index = $i +1;
-								$html = '';
+								$html = "";
 								$html .= "<tr>";
 								$html .= "	<td>".$index."</td>";
 								$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 								$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
-								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
-								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
-								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
-								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
-								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["RecordCount"], 2, ",",".")."</td>";
-								$html .= "</tr>";
+								
+								if($op == "EoRIConS")
+								{									
+									$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
+									$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
+									$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
+									$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
+									$html .= "</tr>";
+								}
+								
+								if($op == "EoRPDF")
+								{
+									$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["nilaiDPP"], 2, ",",".")."</td>";
+								}
 							
 								echo $html;
 								$i++;
