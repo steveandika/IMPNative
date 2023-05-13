@@ -35,11 +35,11 @@
 							$html .= "	<td>".$index."</td>";
 							$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 							$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
-							$html .= "	<td style="text-align:right;">".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
-							$html .= "	<td style="text-align:right;">".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
-							$html .= "	<td style="text-align:right;">".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
-							$html .= "	<td style="text-align:right;">".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
-							$html .= "	<td style="text-align:right;">".number_format($rsl[$i]["RecordCount"], 2, ",",".")."</td>";
+							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
+							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
+							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
+							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
+							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["RecordCount"], 2, ",",".")."</td>";
 							$html .= "</tr>";
 							
 							echo $html;
