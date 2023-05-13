@@ -20,7 +20,7 @@
 				<?php					
 					if(!isset($_SESSION["uid"]))
 					{
-						 for( $i = 0; $i < count( $rsl->data ); $i++ ) {)
+						for( $i = 0; $i < count( $rsl->data ); $i++ ) 
 						{
 							$html = '';
 							$html .= "<tr>";
