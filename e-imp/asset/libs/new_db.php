@@ -29,13 +29,13 @@
 			return $rows;  
 		}  
 		
-		public function get_listEoRWaitingBilled()
+		public function get_listMntrEoRFin($queryString)
 		{
-			$sql = "SELECT * FROM VIEW_MonitoringEstimateICONSGrouping";
+			$sql = "SELECT * FROM $queryString";
 			$results = $this -> query_executed($sql);
 			$rows = $this -> get_fetch_data($results);
 			return $rows;
-		}
+		}		
     
 		protected function get_fetch_data($r)  
 		{  
