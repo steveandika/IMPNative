@@ -41,9 +41,9 @@
 						$index = 0;
 						if(!isset($_SESSION["uid"]))
 						{
+							$index = 1;
 							for( $i = 0; $i < count($rsl); $i++ ) 
 							{
-								$index = $i +1;
 								$html = "";
 								$html .= "<tr>";
 								$html .= "	<td>".$index."</td>";
@@ -66,6 +66,7 @@
 							
 								echo $html;
 								$i++;
+								$index++;
 							}
 						}										
 					?>
