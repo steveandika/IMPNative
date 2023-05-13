@@ -18,12 +18,12 @@
 					
 					if($op == "EoRIConS")
 	                {
-						$html .= "<h2>Monitoring EoR (IConS) - Belum Ditagihkan </h2>";
+						$html .= "<h6>Monitoring EoR (IConS) - Belum Ditagihkan </h6>";
 					}
 					
 					if($op == "EoRPDF")
 					{
-						$html .= "<h2>Monitoring EoR (PDF) - Belum Ditagihkan </h2>";
+						$html .= "<h6>Monitoring EoR (PDF) - Belum Ditagihkan </h6>";
 					}
 					
 					echo $html;					
