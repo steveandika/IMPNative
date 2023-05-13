@@ -29,9 +29,9 @@
 			return $rows;  
 		}  
 		
-		public function get_listEoRWaitingBilled($fields)
+		public function get_listEoRWaitingBilled()
 		{
-			$sql = "SELECT $fields FROM VIEW_MonitoringEstimateICONSGrouping";
+			$sql = "SELECT * FROM VIEW_MonitoringEstimateICONSGrouping";
 			$results = $this -> query_executed($sql);
 			$rows = $this -> get_fetch_data($results);
 			return $rows;
