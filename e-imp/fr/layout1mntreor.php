@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
 		<title>IMP | Integrated Container System</title>
-		<link rel="shortcut icon" href="asset/img/office.png" type="image/x-icon" />    
-		<link rel="stylesheet" type="text/css" href="asset/css/master.css" />  
+		<link rel="shortcut icon" href="../asset/img/office.png" type="image/x-icon" />    
+		<link rel="stylesheet" type="text/css" href="../asset/css/master.css" />  
 	</head>
 	<body>		
 		<div class="w3-container">
