@@ -23,23 +23,27 @@
 					<td>Total Line</th>
 				</tr>
 				
-				<?php					
+				<?php	
+					$index = 0;
 					if(!isset($_SESSION["uid"]))
 					{
 						for( $i = 0; $i < count($rsl); $i++ ) 
 						{
+							$index = $i +1;
 							$html = '';
 							$html .= "<tr>";
-							$html .= "	<td>".$i++."</td>";
-							$html .= "	<td>".$$rsl[i]["shortname"]."</td>";
-							$html .= "	<td>".$$rsl[i]["workshopID"]."</td>";
-							$html .= "	<td>".$$rsl[i]["Owner"]."</td>";
-							$html .= "	<td>".$$rsl[i]["User1"]."</td>";
-							$html .= "	<td>".$$rsl[i]["User2"]."</td>";
-							$html .= "	<td>".$$rsl[i]["ThirdParty"]."</td>";
-							$html .= "	<td>".$$rsl[i]["RecordCount"]."</td>";
+							$html .= "	<td>".$index."</td>";
+							$html .= "	<td>".$rsl[$i]["shortname"]."</td>";
+							$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
+							$html .= "	<td>".$rsl[$i]["Owner"]."</td>";
+							$html .= "	<td>".$rsl[$i]["User1"]."</td>";
+							$html .= "	<td>".$rsl[$i]["User2"]."</td>";
+							$html .= "	<td>".$rsl[$i]["ThirdParty"]."</td>";
+							$html .= "	<td>".$rsl[$i]["RecordCount"]."</td>";
 							$html .= "</tr>";
+							
 							echo $html;
+							$i++;
 						}
 					}
 					
