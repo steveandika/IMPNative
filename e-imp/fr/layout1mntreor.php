@@ -10,23 +10,34 @@
 	</head>
 	<body>		
 		<div class="w3-container">
+			<div class="height-10"></div>
 			<table class="w3-table w3-bordered">
 				<tr>
 					<th>Index</th>
 					<th>Shipping Line</th>
 					<th>Hamparan</th>
+					<th>Owner</th>
+					<th>User 1</th>
+					<th>User 2</th>
+					<th>3rdParty</th>
+					<td>Total Line</th>
 				</tr>
 				
 				<?php					
 					if(!isset($_SESSION["uid"]))
 					{
-						for( $i = 0; $i < count( $rsl->data ); $i++ ) 
+						for( $i = 0; $i < count($rsl); $i++ ) 
 						{
 							$html = '';
 							$html .= "<tr>";
 							$html .= "	<td>".$i++."</td>";
-							$html .= "	<td>".$data[i]["shortname"]."</td>";
-							$html .= "	<td>".$data[i]["workshopID"]."</td>";
+							$html .= "	<td>".$$rsl[i]["shortname"]."</td>";
+							$html .= "	<td>".$$rsl[i]["workshopID"]."</td>";
+							$html .= "	<td>".$$rsl[i]["Owner"]."</td>";
+							$html .= "	<td>".$$rsl[i]["User1"]."</td>";
+							$html .= "	<td>".$$rsl[i]["User2"]."</td>";
+							$html .= "	<td>".$$rsl[i]["ThirdParty"]."</td>";
+							$html .= "	<td>".$$rsl[i]["RecordCount"]."</td>";
 							$html .= "</tr>";
 							echo $html;
 						}
