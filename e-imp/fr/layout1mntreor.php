@@ -12,6 +12,24 @@
 		<div class="w3-container">
 			<div class="w3-responsive">
 				<div class="height-10"></div>
+				
+				<?php
+					$html = "";
+					
+					if($op == "EoRIConS")
+	                {
+						$html .= "<h2>Monitoring EoR (IConS) - Belum Ditagihkan </h2>";
+					}
+					
+					if($op == "EoRPDF")
+					{
+						$html .= "<h2>Monitoring EoR (PDF) - Belum Ditagihkan </h2>";
+					}
+					
+					echo $html;					
+				?>
+								
+				<div class="height-10"></div>
 				<table class="w3-table w3-bordered">
 					<tr>
 						<th>Index</th>
