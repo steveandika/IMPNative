@@ -10,47 +10,48 @@
 	</head>
 	<body>		
 		<div class="w3-container">
-			<div class="height-10"></div>
-			<table class="w3-table w3-bordered">
-				<tr>
-					<th>Index</th>
-					<th>Shipping Line</th>
-					<th>Hamparan</th>
-					<th>Owner</th>
-					<th>User 1</th>
-					<th>User 2</th>
-					<th>3rdParty</th>
-					<td>Total Line</th>
-				</tr>
+			<div class="w3-responsive">
+				<div class="height-10"></div>
+				<table class="w3-table w3-bordered">
+					<tr>
+						<th>Index</th>
+						<th>Shipping Line</th>
+						<th>Hamparan</th>
+						<th style='text-align:right;'>Owner</th>
+						<th style='text-align:right;'>User 1</th>
+						<th style='text-align:right;'>User 2</th>
+						<th style='text-align:right;'>3rdParty</th>
+						<th style='text-align:right;'>Total Line</th>
+					</tr>
 				
-				<?php	
-					$index = 0;
-					if(!isset($_SESSION["uid"]))
-					{
-						for( $i = 0; $i < count($rsl); $i++ ) 
+					<?php	
+						$index = 0;
+						if(!isset($_SESSION["uid"]))
 						{
-							$index = $i +1;
-							$html = '';
-							$html .= "<tr>";
-							$html .= "	<td>".$index."</td>";
-							$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
-							$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
-							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
-							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
-							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
-							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
-							$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["RecordCount"], 2, ",",".")."</td>";
-							$html .= "</tr>";
+							for( $i = 0; $i < count($rsl); $i++ ) 
+							{
+								$index = $i +1;
+								$html = '';
+								$html .= "<tr>";
+								$html .= "	<td>".$index."</td>";
+								$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
+								$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
+								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
+								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
+								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
+								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
+								$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["RecordCount"], 2, ",",".")."</td>";
+								$html .= "</tr>";
 							
-							echo $html;
-							$i++;
-						}
-					}
-					
-					
-				?>
+								echo $html;
+								$i++;
+							}
+						}										
+					?>
 								
-			</table>
+				</table>
+				<div class="height-10"></div>
+			</div>	
 		</div>
 	</body>	
 </html>	
