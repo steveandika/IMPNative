@@ -17,22 +17,22 @@
 					<th>Hamparan</th>
 				</tr>
 				
-				<?php
-					$html = '';
-					$i = 0;
+				<?php					
 					if(!isset($_SESSION["uid"]))
 					{
-						while($i < $rsl)
+						 for( $i = 0; $i < count( $rsl->data ); $i++ ) {)
 						{
+							$html = '';
 							$html .= "<tr>";
 							$html .= "	<td>".$i++."</td>";
-							$html .= "	<td>".$rsl["shortname"]."</td>";
-							$html .= "	<td>".$rsl["workshopID"]."</td>";
+							$html .= "	<td>".$data[i]["shortname"]."</td>";
+							$html .= "	<td>".$data[i]["workshopID"]."</td>";
 							$html .= "</tr>";
+							echo $html;
 						}
 					}
 					
-					echo $html;
+					
 				?>
 								
 			</table>
