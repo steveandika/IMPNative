@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="refresh" content="2;url=//icons.pt-imp.com/auth" />
 		<link rel="shortcut icon" href="e-imp-asset/office.png" type="image/x-icon" />  
-		<link rel="stylesheet" type="text/css" href="asset/css/master.css" />     
+		<link rel="stylesheet" type="text/css" href="asset/css/master.css" />    
 		<title>IMP | Integrated Container System</title>
 		<style>
 		</style>
