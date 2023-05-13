@@ -16,7 +16,7 @@
 	<body >
 		<div class="w3-container">
 	        <div class="height-20"></div>
-			<h5>You have been log out from I-ConS. To start using the application <a href="//icons.pt-imp.com/">click this.</a></h5>
+			<h4>You have been log out from I-ConS. To start using the application <a href="//icons.pt-imp.com/">click this.</a></h4>
 	   
 		</div>	 
 	</body>
