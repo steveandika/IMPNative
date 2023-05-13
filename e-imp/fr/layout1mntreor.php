@@ -18,12 +18,12 @@
 					
 					if($op == "EoRIConS")
 	                {
-						$html .= "<h6 class='w3-text-blue-grey' style='font-weight:500;'>MONITORING EoR (IConS) - Belum Ditagihkan </h6>";
+						$html .= "<h6 class='w3-text-blue-grey' style='font-weight:600;'>MONITORING EoR (IConS) - Belum Ditagihkan </h6>";
 					}
 					
 					if($op == "EoRPDF")
 					{
-						$html .= "<h6 class='w3-text-blue-grey' style='font-weight:500;'>MONITORING EoR (PDF) - Belum Ditagihkan </h6>";
+						$html .= "<h6 class='w3-text-blue-grey' style='font-weight:600;'>MONITORING EoR (PDF) - Belum Ditagihkan </h6>";
 					}
 					
 					echo $html;					
