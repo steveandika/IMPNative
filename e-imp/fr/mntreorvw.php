@@ -8,10 +8,8 @@
 		$op = $_POST["HampName"];
 		if($op == "EoRIConS")
 		{
-			$rsl = $obj -> get_rows(implode(",",array("shortName","workshopID")) ,'' ,"VIEW_MonitoringWaitingInv GROUP BY ".implode(",", array("shortName", "workshopID")));
-	echo "<pre>";  
-	print_r($rsl);  
-	echo "</pre>";  
+			$rsl = $obj -> get_listEoRWaitingBilled(implode(",",array("shortName","workshopID")));
+			include("layout1mntreor.php");
 		}
 	}
 ?>
