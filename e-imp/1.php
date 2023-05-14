@@ -167,9 +167,7 @@
 					document.getElementById("sideBar").style.left = "0px";			
 				}		  
 			}
-	  
-			}
-		
+			
 			function dateSeparator(varID) 
 			{
 				var str = document.getElementById(varID).value;
