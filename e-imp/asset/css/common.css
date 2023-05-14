@@ -435,7 +435,7 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 	html {overflow-x:auto;}	
 	.webfooter, .fr-desktop {display:none!important;}
 
-	.wrapper {width:98%;}
+	.wrapper {left: 5px;right: 5px;}
 	.form-login {width:450px;height:220px;}
 
 	.flex-item{width:100%!important}
