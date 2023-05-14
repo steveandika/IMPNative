@@ -8,10 +8,10 @@
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
-	<title>IMP | Integrated Container System</title>
     <meta name="keywords" content="Container, Logistic, Container Repair, Indo Makmur">
     <meta name="description" content="">
-    <meta name="author" content="">  
+    <meta name="author" content="">  	
+	<title>IMP | Integrated Container System</title>
 	<link rel="shortcut icon" href="../asset/img/office.png" type="image/x-icon" />  
 	<link rel="stylesheet" type="text/css" href="../asset/css/master.css" />  
 	<script src="../asset/js/modernizr.custom.js"></script>
@@ -103,15 +103,18 @@
 	
 	function toggleSideNav() 
 	{		
-		if (document.getElementById("sideBar").style.left == "0px") {
+		if (document.getElementById("sideBar").style.left == "0px") 
+		{
 			document.getElementById("sideBar").style.left = "-250px";	
-			document.getElementById("sideBar").style.width = "250px";	
+			//document.getElementById("sideBar").style.width = "250px";	
 		} 
-		else {
+		else 
+		{
 			document.getElementById("sideBar").style.left = "0px";	
-			document.getElementById("sideBar").style.width = "100%";
+			//document.getElementById("sideBar").style.width = "100%";
 		}		  
 	}
+
 
 
 	function dateSeparator(varID) {
