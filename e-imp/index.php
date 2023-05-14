@@ -14,7 +14,6 @@
 		<title>IMP | Integrated Container System</title>
 		<link rel="shortcut icon" href="asset/img/office.png" type="image/x-icon" />    
 		<link rel="stylesheet" type="text/css" href="asset/css/master.css" />  
-		<script src="asset/js/jquery.min.2.1.1.js"></script>    
 	</head>
 
 	<body>
@@ -31,63 +30,29 @@
 			{ 
 				openDB();
 				include ($_SERVER["DOCUMENT_ROOT"]."/e-imp/asset/libs/dashboard.php");
-  		  		
-			}	
 		?>
 		
-		<div class="wrapper">
-		  <span><b>HITS: </b></span>
-		</div>
- 
-		<script>
-			var dropdown = document.getElementsByClassName("dropdown-btn");
-			var i;
+			<div class="w3-container">
+				<div class="wrapper"></div> 				
+			</div>
 
-			for (i = 0; i < dropdown.length; i++) 
-			{
-				dropdown[i].addEventListener("click", function() 
-				{
-					this.classList.toggle("active");
-					var dropdownContent = this.nextElementSibling;
-					if (dropdownContent.style.display === "block") 
+			<script>
+				function toggleSideNav() 
+				{		
+					if (document.getElementById("sideBar").style.left == "0px") 
 					{
-						dropdownContent.style.display = "none";
+						document.getElementById("sideBar").style.left = "-250px";	
 					} 
 					else 
 					{
-						dropdownContent.style.display = "block";
-					}
-				});
-			}
-	
-			function toggleSideNav() 
-			{		
-				if (document.getElementById("sideBar").style.left == "0px") 
-				{
-					document.getElementById("sideBar").style.left = "-250px";	
-					//document.getElementById("sideBar").style.width = "250px";	
-				} 
-				else 
-				{
-					document.getElementById("sideBar").style.left = "0px";	
-					//document.getElementById("sideBar").style.width = "100%";
-				}		  
-			}
-
-			function dropDownLib() 
-			{
-				var x = document.getElementById("sideBar");
-
-				if (x.className.indexOf("w3-show") == -1) 
-				{
-					x.className += " w3-show";
-				} 
-				else 
-				{ 
-					x.className = x.className.replace(" w3-show", "");
+						document.getElementById("sideBar").style.left = "0px";	
+					}		  
 				}
+
+			</script>
+		
+		<?php
 			}
-		</script>
- 
+		?>
 	</body>
 </html>
