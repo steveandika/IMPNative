@@ -185,7 +185,7 @@
 .header-right{float: right;text-decoration: none;}
 
 /*side menu ------*/
-.sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 0px;top: 45px;width: 250px;background-color: #e1e1d0;overflow : auto;left:-250px;}
+.sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 0px;top: 85px;width: 250px;background-color: #e1e1d0;overflow : auto;left:-250px;}
 .sidenav a, .dropdown-btn{display: block;background: none;cursor: pointer;outline: none;border: none;text-decoration: none;width: 100%;text-align: left;}
 .sidenav a {padding: 2px 0px 2px 5px;}	
 .sidenav a:hover {color: #0033cc;}
