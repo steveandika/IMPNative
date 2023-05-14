@@ -7,9 +7,9 @@
     $masterData = array("ROK2171", "JOK001","ROOT")
 ?>
 
-<div class="headerDiv">
-	<button id="navigation" onclick="toggleSideNav()">&#9776; DASHBOARD | <b> <?php echo strtoupper($_SESSION['uid']) ?></b></button>
-	<span id="desktop">I-ConS © <?php echo date("l, d-m-Y")." |<b> ". strtoupper($_SESSION['uid'])."</b>" ?></span>
+<div class="header">
+	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
+	<div class="header-right"><a href="#user"><b> <?php echo strtoupper($_SESSION['uid']) ?></b></a></div>
 </div>  
   
 <div id="sideBar" class="sidenav padding-top-10 padding-left-10 padding-right-10">
