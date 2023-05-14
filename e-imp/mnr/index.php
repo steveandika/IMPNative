@@ -112,13 +112,14 @@
 	{		
 		if (document.getElementById("sideBar").style.left == "0px") {
 			document.getElementById("sideBar").style.left = "-250px";	
-			document.getElementById("sideBar").style.width = "250px";	
+			//document.getElementById("sideBar").style.width = "250px";	
 		} 
 		else {
 			document.getElementById("sideBar").style.left = "0px";	
-			document.getElementById("sideBar").style.width = "100%";
+			//document.getElementById("sideBar").style.width = "100%";
 		}		  
 	}
+	
 	function dateSeparator(varID) 
 	{
 		var str = document.getElementById(varID).value;
