@@ -34,6 +34,10 @@
   		  		
 			}	
 		?>
+		
+		<div class="wrapper">
+		  <span><b>HITS: </b></span>
+		</div>
  
 		<script>
 			var dropdown = document.getElementsByClassName("dropdown-btn");
