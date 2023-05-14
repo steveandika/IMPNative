@@ -172,76 +172,30 @@
 
 /* dashboard ------*/ 
 .topnav{position:fixed;z-index:1;left:0px!important;top:0px!important;width:100%;background-color:#fbfcfc;height:35px;font-size:15px;font-weight:500;color:#2874A6;padding:10px 10px}
-.headerDiv{
-	position:fixed;
-	display:block;
-	z-index:1;
-	left:0px!important;
-	top:0px!important;
-	width:100%;
-	background-color: #2471a3; /*#0059b3;*/
-	padding:12px 0 33px 20px;
-	color:#fff
-}
-.topnav-content, .headerDiv{/*border:1px solid #eaf2f8!important;*/border-bottom:1px solid #ddd; /*#eaf2f8;*/box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);}
+.header{position:fixed;display:block;z-index:1;left:0px!important;top:0px!important;width:100%;background-color: #2471a3;padding:12px 10px}
+.topnav-content, .header{/*border:1px solid #eaf2f8!important;*/border-bottom:1px solid #ddd; /*#eaf2f8;*/box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);}
 .topnav-content{padding:4px 6px;font-weight:500;/*letter-spacing:0.16em*/}
 .headerDiv-content{display:table-cell}
 .topnav-content button{border:none;outline:none;background:none;}
+.header a.logo {font-size: 25px;font-weight: bold;}
+.header a:hover {background-color: #ddd;color: black;}
+.header a.active {background-color: dodgerblue;color: white;}
+.header-right{float: right}
 
 /*side menu ------*/
-.sidenav{
-	height:94%;
-	position:fixed;
-	z-index:1;
-	transition: 0.5s;
-	overflow-x:hidden;
-	border-right:0px;
-	top:45px;
-	width:250px;
-	background-color:#e1e1d0;
-	overflow : auto;
-}
-.sidenav a, .dropdown-btn{
-	display: block;
-	background: none;
-	cursor: pointer;
-	outline: none;
-	border: none;
-	text-decoration: none;
-	width: 100%;
-	text-align: left;
-}
-.sidenav a {
-	padding: 2px 0px 2px 5px;
-}	
-.sidenav a:hover {
-	color: #0033cc;
-}
-.dropdown-btn{
-	padding:8px 0px 8px 5px;	
-	border-bottom: 1px solid #b8b894;
-}	
-.dropdown-btn:hover {
-	color: #fff;
-	background-color:green;
-}	
-.menu-group-title{display:block;height:25px;line-height:25px;font-weight:600}
-.menu-link{display:block;padding:6px 0 4px 0;overflow:hidden;text-decoration:0;color:#2874A6;white-space:nowrap;cursor:pointer;background-color:#58d68d;}
-.sub-menu-link{display:block;text-decoration:none!important;white-space:nowrap;cursor:pointer;line-height:20px;color:#2874A6;outline:none;padding-left:10px!important}
-.menu-icon{display:block;float:left;width:50px;height:40px;line-height:40px;font-size:20px;color:red}
-.active {
-	background-color: green;
-	color: white;
-}	
-.dropdown-container{	
-	display:none;
-	background-color: #d6d6c2;	
-}
-.fa-caret-down{
-	float:right;
-	padding-right:8px;
-	padding-top:3px;
-}
+.sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 0px;top: 45px;width: 250px;background-color: #e1e1d0;overflow : auto;left:-250px;}
+.sidenav a, .dropdown-btn{display: block;background: none;cursor: pointer;outline: none;border: none;text-decoration: none;width: 100%;text-align: left;}
+.sidenav a {padding: 2px 0px 2px 5px;}	
+.sidenav a:hover {color: #0033cc;}
+.dropdown-btn {padding: 8px 0px 8px 5px;border-bottom: 1px solid #b8b894;}	
+.dropdown-btn:hover {color: #fff;background-color:green;}	
+.menu-group-title {display: block;height:25px;line-height:25px;font-weight:600}
+.menu-link {display: block;padding: 6px 0 4px 0;overflow: hidden;text-decoration:0;color: #2874A6;white-space: nowrap;cursor:pointer;background-color: #58d68d;}
+.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 20px;color: #2874A6;outline: none;padding-left: 10px!important}
+.menu-icon {display: block;float: left;width: 50px;height: 40px;line-height: 40px;font-size: 20px;color: red}
+.active {background-color: green;color: white;}	
+.dropdown-container{display: none;background-color: #d6d6c2;}
+.fa-caret-down{float: right;padding-right:8px;padding-top: 3px;}
 
 /*box menu ---------*/
 .bluebox {display:inline-block;width:250px;border:1px solid #2143C8;line-height:20px;text-align:center;background:#3386FF;color:#FFF;padding-top:15px;padding-bottom:15px;}
@@ -514,14 +468,14 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 	#desktop{display:none}
   
 	.webfooter, .fr-desktop {display:none!important;}
-	.sidenav {left:-250px;}
+
 	.wrapper {
 		margin-left:0px;
 		width:100%;
 		padding:20px 8px;	
 	}
 	.form-login {width:450px;height:220px;}
-	.headerDiv{height:35px;}
+
 	.flex-item{width:100%!important}
 	
 	html {
@@ -551,7 +505,7 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 	
 	.webfooter, .fr-desktop {display:block;}	
 	.fr-desktop {padding:20px 10px}	
-	.sidenav {left:0px!important}
+
 	.wrapper {
 		margin-left:251px;
 		width:82%;
@@ -559,7 +513,6 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 	}  
 	.form-login {width: 33%;height:220px;}
 	.logo img {width: 200px;text-align: center;margin-top: 10px;float: none;}
-	.headerDiv{height:35px;}
 	.toggle_menu{display:none} 
 	
 	html{
