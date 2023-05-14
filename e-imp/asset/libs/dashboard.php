@@ -9,7 +9,7 @@
 
 <div class="header">
 	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
-	<div class="header-right"><a href="#user"><b> <?php echo strtoupper($_SESSION['uid']) ?></b></a></div>
+	<div class="header-right"><a href="#user">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></a></div>
 </div>  
   
 <div id="sideBar" class="sidenav padding-top-10 padding-left-10 padding-right-10">
