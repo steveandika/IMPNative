@@ -112,7 +112,7 @@
 	</head>
 
 	<body>
-		<div class="W3-container"><div class="wrapper">
+		<div class="w3-container"><div class="wrapper">
 
 		<?php
 			if(!isset($_SESSION["uid"])) 
