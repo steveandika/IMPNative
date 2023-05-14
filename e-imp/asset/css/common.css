@@ -216,7 +216,7 @@
 .imp-select{padding:3px 0;width:100%;border:1px solid #ccc}
 
 /* start page container  ----------- */
-.wrapper{margin-top: 55px;border: 2px solid #000;}	
+.wrapper{margin-top: 55px;border: 2px solid #000;background-color: #F0F3F4;padding: 10px 10x;left: 50%;top: 50%;transform: translate(-50%, -50%);}	
 .wrapper::after{content:"";display:table;clear:both}
 .clearfix:after {content:"";display:block;clear:both}
 .wrapper-main{margin-top: 10px;	border: none;width: 98%;min-height: 98%;margin: auto;padding: 15px 15px;}
@@ -435,7 +435,7 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 	html {overflow-x:auto;}	
 	.webfooter, .fr-desktop {display:none!important;}
 
-	.wrapper {width:98%;padding:20px 8px;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+	.wrapper {width:98%;}
 	.form-login {width:450px;height:220px;}
 
 	.flex-item{width:100%!important}
@@ -458,7 +458,7 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 	.webfooter, .fr-desktop {display:block;}	
 	.fr-desktop {padding:20px 10px}	
 
-	.wrapper {width:90%;padding:10px 10px;left: 50%;top: 50%;transform: translate(-50%, -50%);}  
+	.wrapper {width:90%;}  
 	.form-login {width: 33%;height:220px;}
 	.logo img {width: 200px;text-align: center;margin-top: 10px;float: none;}
 	.toggle_menu{display:none} 
