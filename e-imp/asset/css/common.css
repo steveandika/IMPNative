@@ -216,7 +216,7 @@
 .imp-select{padding:3px 0;width:100%;border:1px solid #ccc}
 
 /* start page container  ----------- */
-.wrapper{margin-top: 95px;left: 10px; right: 10px;border: 2px solid #D0D3D4;background-color: #F0F3F4;border-radius: 5px;}	
+.wrapper{margin-top: 90px;left: 10px; right: 10px;border: 2px solid #D0D3D4;background-color: #F0F3F4;border-radius: 5px;}	
 .wrapper::after{content:"";display:table;clear:both}
 .clearfix:after {content:"";display:block;clear:both}
 .wrapper-main{margin-top: 10px;	border: none;width: 98%;min-height: 98%;margin: auto;padding: 15px 15px;}
