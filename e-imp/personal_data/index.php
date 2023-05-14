@@ -15,7 +15,6 @@
 		<link rel="shortcut icon" href="../asset/img/office.png" type="image/x-icon" />  
 		<link rel="stylesheet" type="text/css" href="../asset/css/master.css" />  
 		<script src="../asset/js/modernizr.custom.js"></script>  
-  <!-- <script src="../asset/js/sweetalert2.min.js"></script> -->
 		<script src="../asset/js/jquery.min.2.1.1.js"></script> 
 		<style>    
 			#style-4::-webkit-scrollbar {width:4px;background-color: #F5F5F5;}
@@ -42,91 +41,90 @@
 				mssql_close($dbSQL);
 		?>
 	
-	<div class="wrapper">
-		<div class="w3-row-padding">	   
-			<div class="w3-quarter"> <!-- Categories -->
-				<h2>Categories</h2>
-				<ul class="accordion">		  
+		<div class="w3-container">
+			<div class="wrapper">
+				<div class="w3-row-padding">	   
+					<div class="w3-quarter"> <!-- Categories -->
+						<h2>Categories</h2>
+						<ul class="accordion">		  
 				
-				<?php
-					if(validMenuAccess("11")==1) 
-					{ ?>
-				
-					<li onclick="myFunction('emp')"><a href="#">Employee</a>
-						<div id="emp" class="w3-hide">  
-							<ul class="sub-menu">				
-								<li><a href="?show=ltem"><em>01</em>List</a></li>					
-								<li><a href="?show=frgem"><em>02</em>New Employee</a></li>
-							</ul>
-						</div>	
-					</li>
-			    
-					<li onclick="myFunction('func')"><a href="#">Function</a>
-						<div id="func" class="w3-hide">
-							<ul class="sub-menu">				
-								<li><a href="?show=fcdpt"><em>01</em>List</a></li>					
-								<li><a href="?show=fcadd"><em>02</em>New Function</a></li>
-							</ul>
-						</div>		
-					</li>
-				
-		    <?php
-				}
-				if(validMenuAccess("12")==1) 
-				{ 			  
-			?>
-			
-					<li onclick="myFunction('users')"><a href="#">User</a>
-						<div id="users" class="w3-hide">
-							<ul class="sub-menu">				
-								<li><a href="?show=ru"><em>01</em>List</a></li>					
-								<li><a href="?show=cu_a"><em>02</em>Registration</a></li>
-							</ul>
-						</div>				
-					</li>
-				
-		    <?php
-				}
-            ?>
-			
-				</ul>
-			</div>
-			
-			<div class="w3-threequarter"> <!-- Page Content -->
-				<div id="result">
-				
-					<?php
-						if(isset($_GET["show"])) 
-						{			
+						<?php
 							if(validMenuAccess("11")==1) 
-							{  			  
-								if($_GET["show"] == "ltem") { include("emp_list.php"); }		
-								if($_GET["show"] == "frgem") { include("emp_reg.php"); }		
-								if($_GET["show"] == "fcdpt") { include("function.php"); }	
-								if($_GET["show"] == "fcadd") { include("manage-function.php"); }	       
+							{ ?>
+				
+							<li onclick="myFunction('emp')"><a href="#">Employee</a>
+								<div id="emp" class="w3-hide">  
+									<ul class="sub-menu">				
+										<li><a href="?show=ltem"><em>01</em>List</a></li>					
+										<li><a href="?show=frgem"><em>02</em>New Employee</a></li>
+									</ul>
+								</div>	
+							</li>
+			    
+							<li onclick="myFunction('func')"><a href="#">Function</a>
+								<div id="func" class="w3-hide">
+									<ul class="sub-menu">				
+										<li><a href="?show=fcdpt"><em>01</em>List</a></li>					
+										<li><a href="?show=fcadd"><em>02</em>New Function</a></li>
+									</ul>
+								</div>		
+							</li>
+				
+						<?php
 							}
-							
+					
 							if(validMenuAccess("12")==1) 
-							{ 	
-								if($_GET["show"] == "ru")   { include("users_list.php"); }	
-								if($_GET["show"] == "cu_a") { include("user_reg.php"); }	
+							{ 			  
+						?>
+			
+							<li onclick="myFunction('users')"><a href="#">User</a>
+								<div id="users" class="w3-hide">
+									<ul class="sub-menu">				
+										<li><a href="?show=ru"><em>01</em>List</a></li>					
+										<li><a href="?show=cu_a"><em>02</em>Registration</a></li>
+									</ul>
+								</div>				
+							</li>
+				
+						<?php
 							}
+						?>
+			
+						</ul>
+					</div>
+			
+					<div class="w3-threequarter"> <!-- Page Content -->
+						<div id="result">
+				
+							<?php
+								if(isset($_GET["show"])) 
+								{			
+									if(validMenuAccess("11")==1) 
+									{  			  
+										if($_GET["show"] == "ltem") { include("emp_list.php"); }		
+										if($_GET["show"] == "frgem") { include("emp_reg.php"); }		
+										if($_GET["show"] == "fcdpt") { include("function.php"); }	
+										if($_GET["show"] == "fcadd") { include("manage-function.php"); }	       
+									}
+							
+									if(validMenuAccess("12")==1) 
+									{ 	
+										if($_GET["show"] == "ru")   { include("users_list.php"); }	
+										if($_GET["show"] == "cu_a") { include("user_reg.php"); }	
+									}
 /*                if(validMenuAccess("14")==1) { 					
 				  if($_GET["show"] == "gr_rp") { include("reg_group.php"); }
 				}  */
-						}		  
-					?>
-				</div>
-			</div>
+								}		  
+							?>
+							
+						</div>
+					</div>
 		
-		</div> <!-- End Of Row Padding-->
-  
-	</div><!-- wrapper -->  
-	
-		<?php
-			}
-		?>
-  
+				</div> <!-- End Of Row Padding-->  
+			</div><!-- wrapper -->  
+		</div>	
+
 		<script>
 			function toggleSideNav() 
 			{		
@@ -175,7 +173,11 @@
 		<script type="text/javascript">
 			function openPage(urlvar) { $("#result").load(urlvar); }
 			function loadurl(urlvar) { location.replace(urlvar); }
-		</script>
-  
+		</script>		
+	
+		<?php
+			}
+		?>
+    
 	</body>
 </html>   
