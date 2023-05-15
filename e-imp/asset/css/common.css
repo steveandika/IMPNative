@@ -253,7 +253,7 @@ float: left;height: 30px;padding: 0;width: 100px;cursor: pointer;font: bold 14px
 .style-table-bordered{border-collapse:collapse;border-spacing:0;width:100%;display:table;font-family:Roboto,sans-serif;font-size:12px;border:1px solid #ecf0f1}
 .style-table-bordered td{border:1px solid #ecf0f1}
 .style-table-bordered td,.style-table-bordered th{padding:3px;display:table-cell;text-align:left;vertical-align:top}
-.style-input{display:block;border:1px solid #d0d3d4;width:100%;background:#fcfcf7;color:#3c3c3d;height:22px;padding-bottom:3px;padding-left:3px;padding-right:3px}
+.style-input{display:block;border:1px solid #d0d3d4;width:100%;background:#fcfcf7;color:#3c3c3d;height:22px;padding-bottom:3px;padding-left:3px;padding-right:3px; font-size:13px}
 .style-select{display:block;border:1px solid #d0d3d4;width:100%;border-radius:3px;background:#fcfcf7;color:#3c3c3d;height:22px}
 .style-border{border:1px solid #d0d3d4!important}
 .style-input:focus{outline:none;border-bottom:1px solid #3eb0f6;background:#f2f7fa}
