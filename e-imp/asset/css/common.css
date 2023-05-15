@@ -263,7 +263,7 @@ float: left;height: 30px;padding: 0;width: 100px;cursor: pointer;font: bold 14px
 
 /* search style */
 form.search input[type=text],select {padding: 7px;border: 1px solid #ccc;float: left;width: 80%;text-transform:uppercase;}	
-form.search button {float: left;width: 20%;padding: 8px;background: #2196F3;color: white;border: 1px solid grey;border-left: none;cursor: pointer;height: 29px;border-radius: 4px;}	
+form.search button {float: left;width: 20%;padding: 8px ;background: #2196F3;color: white;border: 1px solid grey;border-left: none;cursor: pointer;border-radius: 4px;}	
 form.search button: hover {background: #0b7dda;}
 form.search::after {content: "";clear: both;display: table;}	
 /* end search style */
