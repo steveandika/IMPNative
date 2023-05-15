@@ -24,7 +24,7 @@
 ?>
 
 <div style="overflow-x:auto;height:65vh;">
-	<table class="w3-bordered">
+	<table class="w3-table w3-bordered">
 		<tr>
 			<td colspan="8" style="font-weight:600;background:#ddd">Container Info</td>
 		</tr>	
@@ -40,7 +40,7 @@
 		</tr>
 	</table>
 	<div class="height-5"></div>
-	<table class="w3-striped">
+	<table class="w3-table w3-striped">
 		<thead>
 			<tr>
 				<th></th>
