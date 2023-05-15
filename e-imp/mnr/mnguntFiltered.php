@@ -40,7 +40,7 @@
 		</tr>
 	</table>
 	<div class="height-5"></div>
-	<table class="w3-table w3-striped">
+	<table class="w3-table w3-table-all w3-striped">
 		<thead>
 			<tr>
 				<th></th>
