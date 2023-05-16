@@ -111,9 +111,7 @@
 		</script>    
 	</head>
 
-	<body>
-		<div class="w3-container"
-
+	<body>		
 		<?php
 			if(!isset($_SESSION["uid"])) 
 			{
@@ -126,13 +124,13 @@
 				openDB();
 				include ($_SERVER["DOCUMENT_ROOT"]."/e-imp/asset/libs/dashboard.php");
 				
-				echo '<div class="wrapper">';	  
+				echo '<div class="w3-container"><div class="wrapper">';	  
 				if(isset($_GET["src"])) 
 				{
 					$sourcepage = base64_decode($_GET["src"]);  				
 					include($sourcepage);
 				}	  
-				echo "</div>";
+				echo "</div></div>";
 			}		
 		?>
 		
