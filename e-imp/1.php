@@ -112,7 +112,7 @@
 	</head>
 
 	<body>
-		<div class="w3-container"><div class="wrapper">
+		<div class="w3-container"
 
 		<?php
 			if(!isset($_SESSION["uid"])) 
@@ -136,7 +136,7 @@
 			}		
 		?>
 		
-		</div></div>
+		</div>
 
 		<script>
 			var dropdown = document.getElementsByClassName("dropdown-btn");
