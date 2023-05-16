@@ -3,9 +3,9 @@
 	?>
 	
 	<div class="height-10"></div>
-	<div id="headerpage">
+	<div class="header">
 		<div class="header-right">
-			<a class="active" href="#user">EoR Belum Ditagihkan</b></a>
+			<a class="active" href="#user"><b>EoR Belum Ditagihkan</b></a>
 		</div>
 	</div>
 	<div class="height-10"></div>
