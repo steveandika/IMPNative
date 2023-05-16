@@ -122,7 +122,7 @@
 			{ 
 				include_once ($_SERVER["DOCUMENT_ROOT"]."/e-imp/asset/libs/common.php"); 	
 				openDB();
-				include ($_SERVER["DOCUMENT_ROOT"]."/e-imp/asset/libs/dashboard.php");
+				//include ($_SERVER["DOCUMENT_ROOT"]."/e-imp/asset/libs/dashboard.php");
 				
 				echo '<div class="w3-container"><div class="wrapper">';	  
 				if(isset($_GET["src"])) 
