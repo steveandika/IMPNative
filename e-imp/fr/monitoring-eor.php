@@ -3,7 +3,7 @@
 	?>
 	
 	<div class="height-10"></div>
-	<div class="header">
+	<div class="wrapper-header">
 		<div class="header-right">
 			<a class="active" href="#user"><b>EoR Belum Ditagihkan</b></a>
 		</div>
