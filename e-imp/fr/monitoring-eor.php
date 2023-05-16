@@ -15,7 +15,7 @@
 			<div class="w3-dropdown-hover">
 				<button class="w3-button w3-gray">Tipe Monitoring</button>
 				<div class="w3-dropdown-content w3-bar-block w3-border">
-					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=0" ?>>EoR Belum Ditagihkan</a>
+					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")?>>EoR Belum Ditagihkan</a>
 					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=1" ?>>EoR (PDF) Belum Ditagihkan</a>
 					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=2" ?>>Menunggu ID Invoice</a>
 					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=3" ?>>Penagihan Complete</a>				
