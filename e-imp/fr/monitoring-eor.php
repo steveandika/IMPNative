@@ -30,11 +30,11 @@
 		{
 			include("../asset/libs/new_db.php");
 			
-			$id = $_GET['sid'];
+/*			$id = $_GET['sid'];
 			if($id == 0) {include("mntreorlayout1.php");}
 			if($id == 1) {include("mntreorlayout2.php");}
 			if($id == 2) {include("mntreorlayout3.php");}
-			if($id == 3) {include("mntreorlayout4.php");}
+			if($id == 3) {include("mntreorlayout4.php");}*/
 		}
 	}
 ?>	
