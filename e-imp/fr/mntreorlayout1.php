@@ -21,6 +21,7 @@
 					$html = "";
 					$html .= "<tr>";
 					$html .= "	<td>".$index."</td>";
+					$html .= "	<td></td>";
 					$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 					$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
 					$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
