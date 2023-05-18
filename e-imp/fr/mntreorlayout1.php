@@ -3,6 +3,8 @@
 		$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSGrouping");
 	?>
 	
+	<h6 class='w3-text-blue-grey' style='font-weight:600;'>MONITORING EoR (IConS) - Belum Ditagihkan </h6>
+	<div class="height-10"></div>
 	<table class="w3-table w3-bordered">
 		<tr>
 			<th>Index</th>
