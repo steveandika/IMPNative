@@ -154,8 +154,8 @@
 	
 .border-radius-3{-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px}
 .border-radius-5{-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px}
-.left-rounded-5{-moz-border-radius: 5px 0 0 5px;-webkit-border-radius: 5px 0 0 5px;border-top-right-radius: 5px 0 0 5px;}
-.right-rounded-5{-moz-border-radius: 0 5px 5px 0;-webkit-border-radius: 0 5px 5px 0;border-top-right-radius: 0 5px 5px 0;}
+.left-rounded-5{-moz-border-radius: 5px 0 0 5px;-webkit-border-radius: 5px 0 0 5px;border-radius: 5px 0 0 5px;}
+.right-rounded-5{-moz-border-radius: 0 5px 5px 0;-webkit-border-radius: 0 5px 5px 0;border-radius: 0 5px 5px 0;}
 
 .se-pre-con{position:fixed;left:0;top:0;width:100%;height:100%;z-index:9999;background:url(../img/loading.gif) center no-repeat #fff}
 
@@ -179,7 +179,7 @@
 .headerDiv-content{display:table-cell}
 .topnav-content button{border:none;outline:none;background:none;}
 .header{position: fixed;display: block;z-index: 1;left: 0px!important;top: 0px!important;width: 100%;background-color: #2471a3;padding: 12px 10px}
-.header a {float: left;color: black;text-align: center;padding: 10px;text-decoration: none;font-size: 14px;line-height: 25px;border-radius: 4px;}
+.header a {float: left;color: black;text-align: center;padding: 10px;text-decoration: none;font-size: 14px;line-height: 25px;border-radius: 5px;}
 /*.header a.logo {font-size: 25px;font-weight: bold;}*/
 .header .logo {font-size: 22px;font-weight: bold;padding: 10px 10px; border-radius: 4px;}
 .header a:hover {background-color: #ddd;color: black;}
@@ -195,7 +195,7 @@
 .dropdown-btn:hover {color: #fff;background-color:green;}	
 .menu-group-title {display: block;height:25px;line-height:25px;font-weight:600}
 .menu-link {display: block;padding: 6px 0 4px 0;overflow: hidden;text-decoration:0;color: #2874A6;white-space: nowrap;cursor:pointer;background-color: #58d68d;}
-.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 23px;color: #2874A6;outline: none;padding-left: 10px!important}
+.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 25px;color: #2874A6;outline: none;padding-left: 10px!important}
 .menu-icon {display: block;float: left;width: 50px;height: 40px;line-height: 40px;font-size: 20px;color: red}
 .active {background-color: green;color: white;}	
 .dropdown-container{display: none;background-color: #d6d6c2;}
