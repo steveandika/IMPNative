@@ -14,6 +14,7 @@
 	</head>
 	<body>		
 		<div class="w3-container w3-responsive">
+			<div class="height-10"></div>
 			<div class="w3-container w3-light-grey">
 				<div class="height-10"></div>
 				<h6 class='w3-text-blue-grey' style='font-weight:600;'>MONITORING EoR (IConS) - Belum Ditagihkan (Detail)</h6>
