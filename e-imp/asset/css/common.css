@@ -401,7 +401,8 @@ header h1 {margin: 0;padding: 0 15px;height:28px;line-height:28px;font-weight:50
 
 	.wrapper {left: 5px;right: 5px;}
 	.form-login {width:450px;height:220px;}
-
+    
+    .row {flex-direction: column; } 	
 	.flex-item{width:100%!important}
 	
 	form.changepswd, form.rpt {width: 95%;}
