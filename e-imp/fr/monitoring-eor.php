@@ -9,7 +9,7 @@
 ?>
 	
 		<div class="height-10"></div>
-		<div class="wrapper-header">
+		<div class="wrapper-header" style="border:1px solid #ddd">
 			<div class="title">Monitoring Penagihan EoR</div>
 		
 			<div class="header-right">
