@@ -11,16 +11,18 @@
 	<div class="height-10"></div>
 	<div class="wrapper-header">
 		<div class="title">Monitoring Penagihan EoR</div>
+		
 		<div class="header-right">
-			<div class="w3-dropdown-hover">
-				<button class="w3-button w3-gray">Tipe Monitoring</button>
-				<div class="w3-dropdown-content w3-bar-block w3-border">
-					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=0" ?>>EoR Belum Ditagihkan</a>
-					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=1" ?>>EoR (PDF) Belum Ditagihkan</a>
-					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=2" ?>>Menunggu ID Invoice</a>
-					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=3" ?>>Penagihan Complete</a>				
-				</div>
-			</div>
+			<form id="mntr-eor" method="post">
+					<select class="w3-select w3-border" name="HampName" required />
+						<option value="EoRIConS">Eor IConS belum ditagihkan</option>
+						<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
+						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
+						<option value="EoRIComplete">Lengkap</option>
+					</select>			
+					<input type="submit" class="w3-button w3-blue" style="border-radius:5px" name="register" value="View" />
+			</form>
+
 		</div>
 	</div>
 	<div class="height-10"></div>
