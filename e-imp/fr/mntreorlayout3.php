@@ -8,7 +8,6 @@
 	<table class="w3-table w3-bordered">
 		<tr>
 			<th>Index</th>
-			<th></th>
 			<th>Document Number</th>
 			<th>Submit Date</th>
 			<th>Shipping Line</th>
@@ -24,7 +23,6 @@
 				$html = "";
 				$html .= "<tr>";
 				$html .= "	<td>".$index."</td>";
-				$html .= "	<td></td>";
 				$html .= "	<td>".$rsl[$i]["DocNumber"]."</td>";
 				$html .= "	<td>".$rsl[$i]["SubmitDate"]."</td>";
 				$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
