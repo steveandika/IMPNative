@@ -19,7 +19,7 @@
 						<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
 						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
 						<option value="EoRIComplete">Lengkap</option>
-					</select>			
+					</select><span></span>			
 					<input type="submit" class="w3-button w3-blue" style="border-radius:5px" name="register" value="View" />
 			</form>
 
