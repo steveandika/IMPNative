@@ -30,7 +30,7 @@
 				$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 				$html .= "	<td>".$rsl[$i]["Party"]."</td>";
 				$html .= "	<td>".$rsl[$i]["activityType"]."</td>";
-				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["jumlahEoR"], 2, ",",".")."</td>";
+				$html .= "	<td style='text-align:right;'>".$rsl[$i]["jumlahEoR"]."</td>";
 				$html .= "</tr>";
 					
 				echo $html;
