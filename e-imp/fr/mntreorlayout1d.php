@@ -42,7 +42,7 @@
 							$liner = $_GET["sh"];
 							$hamparan = $_GET["w"];
 							
-							include("asset/libs/new_db.php");
+							include("../asset/libs/new_db.php");
 							$obj = new DatabaseClass ();
 							$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONS WHERE shortname='$liner' and workshopID='$hamparan'");
 			
