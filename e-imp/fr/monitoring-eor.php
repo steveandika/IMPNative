@@ -27,7 +27,7 @@
 		<div class="height-10"></div>
 		<div class="w3-container w3-responsive w3-light-grey w3-round-large">
 			
-<?php
+	<?php
 		if(isset($_GET['sid']))
 		{
 			include("asset/libs/new_db.php");
@@ -37,10 +37,13 @@
 /*			if($id == 1) {include("mntreorlayout2.php");}
 			if($id == 2) {include("mntreorlayout3.php");}
 			if($id == 3) {include("mntreorlayout4.php");}*/
-		}
-		
+		}		
+	?>
 		
 		</div>
+		
+<?php		
+
 	}
 ?>	
 
