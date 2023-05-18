@@ -16,6 +16,8 @@
 		<div class="w3-container">
 			<div class="w3-responsive">
 				<div class="height-10"></div>
+				<h6 class='w3-text-blue-grey' style='font-weight:600;'>MONITORING EoR (IConS) - Belum Ditagihkan (Detail)</h6>
+				<div class="height-10"></div>
 				<table class="w3-table w3-bordered">
 					<tr>
 						<th>Index</th>
@@ -40,7 +42,7 @@
 						else 
 						{
 							$liner = $_GET["sh"];
-							$hamparan = $_GET["w"];
+							$hamparan = $_GET["w"];	
 							
 							include("../asset/libs/new_db.php");
 							$obj = new DatabaseClass ();
