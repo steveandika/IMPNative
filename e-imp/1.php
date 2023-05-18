@@ -127,7 +127,8 @@
 				echo '<div class="w3-container"><div class="wrapper">';	  
 				if(isset($_GET["src"])) 
 				{
-					$sourcepage = base64_decode($_GET["src"]);  				
+					$sourcepage = base64_decode($_GET["src"]);  	
+					echo $sourcepage;	
 					include($sourcepage);
 				}	  
 				echo "</div></div>";
