@@ -20,7 +20,7 @@
 						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
 						<option value="EoRIComplete">Lengkap</option>
 					</select>		
-					<input type="submit" class="w3-button w3-blue right-rounded-4" name="HampName" value="View" />
+					<button class="w3-button w3-blue right-rounded-4" type="submit" name="HampName">View</button>
 			</form>
 
 		</div>
