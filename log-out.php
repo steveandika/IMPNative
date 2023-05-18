@@ -9,8 +9,6 @@
 		<link rel="shortcut icon" href="e-imp-asset/office.png" type="image/x-icon" />  
 		<link rel="stylesheet" type="text/css" href="asset/css/master.css" />    
 		<title>IMP | Integrated Container System</title>
-		<style>
-		</style>
 	</head>
 
 	<body >
