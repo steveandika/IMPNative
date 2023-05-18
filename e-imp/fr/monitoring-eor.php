@@ -29,7 +29,7 @@
 <?php
 		if(isset($_GET['sid']))
 		{
-			include("../asset/libs/new_db.php");
+			include("asset/libs/new_db.php");
 			
 			$id = $_GET['sid'];
 			if($id == 0) {include("mntreorlayout1.php");}
