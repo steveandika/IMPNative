@@ -128,7 +128,6 @@
 				if(isset($_GET["src"])) 
 				{
 					$sourcepage = base64_decode($_GET["src"]);  	
-					echo $sourcepage;	
 					include($sourcepage);
 				}	  
 				echo "</div></div>";
