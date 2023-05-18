@@ -15,28 +15,29 @@
 			<th style="text-align:right;">User 1</th>
 			<th style="text-align:right;">User 2</th>
 			<th style="text-align:right;">3rdParty</th>
+        </tr>			
 			
-			<?php	
-				$index = 1;
-				for( $i = 0; $i < count($rsl); $i++ ) 
-				{
-					$html = "";
-					$html .= "<tr>";
-					$html .= "	<td>".$index."</td>";
-					$html .= "	<td></td>";
-					$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
-					$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
-					$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
-					$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
-					$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
-					$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
-					$html .= "</tr>";
+		<?php	
+			$index = 1;
+			for( $i = 0; $i < count($rsl); $i++ ) 
+			{
+				$html = "";
+				$html .= "<tr>";
+				$html .= "	<td>".$index."</td>";
+				$html .= "	<td></td>";
+				$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
+				$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
+				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
+				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User1"], 2, ",",".")."</td>";
+				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["User2"], 2, ",",".")."</td>";
+				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["ThirdParty"], 2, ",",".")."</td>";
+				$html .= "</tr>";
 					
-					echo $html;
-					$index++;
-				}
+				echo $html;
+				$index++;
+			}
 					
-			?>
+		?>
 								
 	</table>
 	<div class="height-10"></div>
