@@ -14,7 +14,7 @@
 		
 		<div class="header-right">
 			<form id="mntr-eor" method="post">
-					<select class="w3-select w3-border" name="HampName" style="width: 175px;text-transform: normal!important;" required />
+					<select class="w3-select w3-border" name="HampName" style="width: 175px;text-transform: none!important;" required />
 						<option value="EoRIConS">Eor IConS belum ditagihkan</option>
 						<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
 						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
