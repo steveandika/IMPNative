@@ -9,8 +9,8 @@
 		<tr>
 			<th>Index</th>
 			<th></th>
-			<th>Shipping Line</th>
-			<th>Hamparan</th>
+			<th>Shipping Line</th>			
+			<th>Hamparan</th>			
 			<th style="text-align:right;">Owner</th>
 			<th style="text-align:right;">User 1</th>
 			<th style="text-align:right;">User 2</th>
@@ -24,7 +24,7 @@
 				$html = "";
 				$html .= "<tr>";
 				$html .= "	<td>".$index."</td>";
-				$html .= "	<td></td>";
+				$html .= "	<td><a href='mntreorlayout1d.php&sh='".$rsl[$i]["shortName"]."'&w='".$rsl[$i]["workshopID"]."' class='w3-button w3-blue-grey w3-round-large' target='wdetail'">View."</a></td>";
 				$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 				$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
 				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["Owner"], 2, ",",".")."</td>";
