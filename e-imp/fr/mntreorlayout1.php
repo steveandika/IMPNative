@@ -1,5 +1,4 @@
-	<?php
-		include("../asset/libs/new_db.php");
+	<?php		
 		$obj = new DatabaseClass ();
 		$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSGrouping");
 	?>
