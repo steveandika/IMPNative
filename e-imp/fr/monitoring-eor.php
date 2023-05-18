@@ -17,7 +17,7 @@
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=2" ?>>Menunggu ID Invoice</a>
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=3" ?>>Penagihan Complete</a>		
 			</div>
-		</div>
+		</div> 
 		<div class="height-10"></div>
 		<div class="w3-container w3-responsive w3-light-grey w3-round-large">
 			
