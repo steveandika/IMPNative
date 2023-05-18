@@ -34,7 +34,7 @@
 				$html .= "	<td>".$rsl[$i]["BillParty"]."</td>";
 				$html .= "	<td>".$rsl[$i]["invoiceNumber"]."</td>";
 				$html .= "	<td>".$rsl[$i]["InvoiceDate"]."</td>";
-				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["TotalRecord"], 2, ",",".")."</td>";
+				$html .= "	<td style='text-align:right;'>".$rsl[$i]["TotalRecord"]."</td>";
 				$html .= "</tr>";
 					
 				echo $html;
