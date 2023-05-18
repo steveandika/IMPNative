@@ -9,18 +9,16 @@
 ?>
 	
 		<div class="height-10"></div>
-		<table class="w3-table">
-			<tr>
-				<td><h6>Monitoring Penagihan EoR</h6></td>		
-			</tr>
-			<tr>
+		<div class="row">
+			<div class="colm-left"><h6>Monitoring Penagihan EoR</h6></div>		
+			<div class="colm-right">
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=0" ?>>EoR Belum Ditagihkan</a>
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=1" ?>>EoR (PDF) Belum Ditagihkan</a>
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=2" ?>>Menunggu ID Invoice</a>
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=3" ?>>Penagihan Complete</a>		
-			</tr>
+			</div>
 			
-		</table> 
+		</div> 
 		<div class="height-10"></div>
 		<div class="w3-container w3-responsive w3-light-grey w3-round-large">
 			
