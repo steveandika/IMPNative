@@ -10,7 +10,7 @@
 	
 		<div class="height-10"></div>
 		<div class="row">
-			<div class="colm-left"><h6>Monitoring Penagihan EoR</h6></div>
+			<div class="colm-left">&nbsp;<h6>Monitoring Penagihan EoR</h6></div>
 			<div class="colm-right">
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=0" ?>>EoR Belum Ditagihkan</a>
 				<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."&sid=1" ?>>EoR (PDF) Belum Ditagihkan</a>
