@@ -12,7 +12,6 @@
 		<title>IMP | Integrated Container System</title>
 		<link rel="shortcut icon" href="asset/img/office.png" type="image/x-icon" />    
 		<link rel="stylesheet" type="text/css" href="asset/css/master.css" />  
-		<script src="asset/js/modernizr.custom.js"></script> 	
 		<script src="asset/js/jquery.min.2.1.1.js"></script>    
 		<script type='text/javascript'>
 			var file;
