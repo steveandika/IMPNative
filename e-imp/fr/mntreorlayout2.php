@@ -12,25 +12,26 @@
 			<th>Shipping Line</th>
 			<th>Hamparan</th>
 			<th style="text-align:right;">Before Tax</th>
+		</tr>
 			
-			<?php	
-				$index = 1;
-				for( $i = 0; $i < count($rsl); $i++ ) 
-				{
-					$html = "";
-					$html .= "<tr>";
-					$html .= "	<td>".$index."</td>";
-					$html .= "	<td></td>";
-					$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
-					$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
-					$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["nilaiDPP"], 2, ",",".")."</td>";
-					$html .= "</tr>";
+		<?php	
+			$index = 1;
+			for( $i = 0; $i < count($rsl); $i++ ) 
+			{
+				$html = "";
+				$html .= "<tr>";
+				$html .= "	<td>".$index."</td>";
+				$html .= "	<td></td>";
+				$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
+				$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
+				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["nilaiDPP"], 2, ",",".")."</td>";
+				$html .= "</tr>";
 					
-					echo $html;
-					$index++;
-				}
+				echo $html;
+				$index++;
+			}
 					
-			?>
+		?>
 								
 	</table>
 	<div class="height-10"></div>
