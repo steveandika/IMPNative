@@ -21,7 +21,7 @@
 				$html = "";
 				$html .= "<tr>";
 				$html .= "	<td>".$index."</td>";
-				$html .= "	<td></td>";
+				$html .= "	<td><a href='fr/mntreorlayout2d.php?sh=".$rsl[$i]["shortName"]."&w=".$rsl[$i]["workshopID"]."' class='w3-button w3-blue w3-round-medium' target='wdetail'>View</a></td>";
 				$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 				$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
 				$html .= "	<td style='text-align:right;'>".number_format($rsl[$i]["nilaiDPP"], 2, ",",".")."</td>";
