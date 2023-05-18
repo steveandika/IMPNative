@@ -317,7 +317,7 @@ background-color:#bc3315;}
 
 /*dashboard, page header*/
 .row {display: flex;flex-direction: row;justify-content: space-around;align-items: center;width: 100%;border:1px solid #212F3C;background-color: #17202A;}
-.colm-left {flex: 0 0 30%;text-align: left;} 
+.colm-left {flex: 0 0 30%;padding-left: 10px} 
 .colm-right {flex: 0 0 70%;text-align: center;}
 .colm-right a {float: right;color: white;text-align: center;padding: 10px;text-decoration: none;font-size: 14px;line-height: 20px;border-right: 1px solid #212F3C}
 
