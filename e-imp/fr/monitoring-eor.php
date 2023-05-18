@@ -13,16 +13,15 @@
 		<div class="title">Monitoring Penagihan EoR</div>
 		
 		<div class="header-right">
-			<form id="mntr-eor" method="post">
-					<select class="w3-select w3-border" name="HampName" style="width: 175px;text-transform: none!important;" required />
-						<option value="EoRIConS">Eor IConS belum ditagihkan</option>
-						<option value="EoRPDF">Eor Pelayaran belum ditagihkan</option>
-						<option value="EoRInv">Eor Sudah ditagihkan belum ada No. Invoice</option>
-						<option value="EoRIComplete">Lengkap</option>
-					</select>		
-					<button class="w3-button w3-dark-grey" type="submit" name="HampName">View</button>
-			</form>
-
+			<div class="w3-dropdown-hover">
+				<button class="w3-button w3-gray">Tipe Monitoring</button>
+				<div class="w3-dropdown-content w3-bar-block w3-border">
+					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=0" ?>>EoR Belum Ditagihkan</a>
+					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=1" ?>>EoR (PDF) Belum Ditagihkan</a>
+					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=2" ?>>Menunggu ID Invoice</a>
+					<a class="w3-bar-item w3-button" href=<?php echo "/e-imp/1?src=".base64_encode("fr/monitoring-eor.php")."?sid=3" ?>>Penagihan Complete</a>				
+				</div>
+			</div>		
 		</div>
 	</div>
 	<div class="height-10"></div>
