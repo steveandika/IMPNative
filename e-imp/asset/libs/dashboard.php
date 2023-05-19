@@ -62,11 +62,11 @@
 		
         $html .= '<button class="dropdown-btn border-radius-3">Reports<i class="fa fa-caret-down"></i></button>';
 		$html .= '<div class="dropdown-container"><div class="height-5"></div>';
-		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/hw_summary.php").'" class="sub-menu-link padding-left-15">Summary Hamparan</a>'; 
-        $html .= '<a href="?p=wsurvey" class="sub-menu-link">Waiting Survey</a>';
+		//$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/hw_summary.php").'" class="sub-menu-link padding-left-15">Summary Hamparan</a>'; 
+        //$html .= '<a href="?p=wsurvey" class="sub-menu-link">Waiting Survey</a>';
 		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-waitingapp.php").'" class="sub-menu-link padding-left-15">Waiting Approval</a>'; 
         $html .= '<a href="?p=w_fns" class="sub-menu-link">Waiting C/R</a>';
-		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-sumRepair.php").'" class="sub-menu-link padding-left-15">Summary Repair</a>'; 
+		//$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-sumRepair.php").'" class="sub-menu-link padding-left-15">Summary Repair</a>'; 
 		/*$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/mntreor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; */
 		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/monitoring-eor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; 
 		$html .= '<div class="height-5"></div>';
