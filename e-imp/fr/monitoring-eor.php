@@ -32,6 +32,8 @@
 			if($id == 1) {include("mntreorlayout2.php");}
 			if($id == 2) {include("mntreorlayout3.php");}
 			if($id == 3) {include("mntreorlayout4.php");}
+			
+			$rsl -> mssql_close();
 		}		
 	?>
 		
