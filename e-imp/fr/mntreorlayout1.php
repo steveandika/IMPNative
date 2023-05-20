@@ -37,7 +37,8 @@
 				echo $html;
 				$index++;
 			}
-					
+			
+			$rsl -> close();		
 		?>
 								
 	</table>
