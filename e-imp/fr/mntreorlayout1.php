@@ -37,7 +37,7 @@
 				$index++;
 			}
 			
-			$rsl -> mssql_free_result($obj);		
+			$rsl -> getCloseConn();		
 		?>
 								
 	</table>
