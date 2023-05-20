@@ -37,7 +37,7 @@
 				$index++;
 			}
 			
-			$rsl -> getCloseConn();		
+			$rsl = $obj -> getCloseConn();		
 		?>
 								
 	</table>
