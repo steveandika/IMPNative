@@ -18,7 +18,6 @@
         </tr>			
 			
 		<?php	
-			$defHTML = $_SESSION['defurl'];
 			$index = 1;
 			for( $i = 0; $i < count($rsl); $i++ ) 
 			{
@@ -38,7 +37,7 @@
 				$index++;
 			}
 			
-			$rsl -> close();		
+			$rsl -> mssql_free_result($obj);		
 		?>
 								
 	</table>
