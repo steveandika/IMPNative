@@ -11,13 +11,7 @@
 			mssql_connect($this -> host, $this -> username, $this -> password) or die(mssql_get_last_message);  
 			mssql_select_db('CSSCY') or die(mssql_get_last_message);  
 		}
-		
-		public function getCloseConn()
-		{
-			mssql_free_result($this);
-			mssql_close($this);
-		}
-		
+
 		// this method used to execute mysql query  
 		protected function query_executed($sql)  
 		{  
@@ -52,5 +46,10 @@
 			}  
 			return $array;  
 		}  
+		
+		public function __destruct()
+		{
+			return @mssql_close($this);
+		}
 	}  
 ?>
