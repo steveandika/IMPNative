@@ -36,8 +36,6 @@
 				echo $html;
 				$index++;
 			}
-			
-			$rsl = $obj -> getCloseConn();		
 		?>
 								
 	</table>
