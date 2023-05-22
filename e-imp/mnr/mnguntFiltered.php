@@ -64,7 +64,8 @@
 	{
 		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' and workshopID= '$workshopID' order by gateIn DESC; ";
 	}	
-	$result=mssql_query($query);          
+	$result=mssql_query($query);    
+	if (strtoupper($_SESSION["uid"])=="ROOT") { echo $query."<br>"; }
 	while($arr = mssql_fetch_array($result)) 
 	{
 		$principle = "";
@@ -75,11 +76,11 @@
 		if($arr['principle']!="") { $principle = haveCustomerName($arr['principle']); }
 		
 		$kodeBooking = str_replace(" ","",$arr["bookInID"]);
-		//$stmt = mssql_init("C_GetInfoAlreadyBilled");
-        //mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
-	    //mssql_bind($stmt, "@Result", $result, SQLVARCHAR, false, false, 30);
-	    //$result = mssql_execute($stmt);
-	    //mssql_free_statement($stmt);	
+		$stmt = mssql_init("C_GetInfoAlreadyBilled");
+        mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
+	    mssql_bind($stmt, "@Result", $result, SQLVARCHAR, false, false, 30);
+	    $result = mssql_execute($stmt);
+	    mssql_free_statement($stmt);	
 		
 		echo '<tr>';
 	
