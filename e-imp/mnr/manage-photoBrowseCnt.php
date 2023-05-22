@@ -57,7 +57,7 @@
 		}
 		else
 		{
-			echo date('Y-m-d', strtotime($arr['gateIn']))
+			echo date('Y-m-d', strtotime($arr['gateIn']));
 		}
 ?>	  
 			 </td>
