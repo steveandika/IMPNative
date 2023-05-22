@@ -35,7 +35,8 @@
 	
 ?>
 
-<div style="overflow-x:auto;height:65vh;">
+<div class="w3-container w3-responsive w3-light-grey w3-round-large">   
+	<div class="height-10"></div>
 	<table class="w3-table w3-bordered">
 		<tr>
 			<td colspan="8" style="font-weight:600;background:#ddd">Container Info</td>
@@ -51,7 +52,7 @@
 			<td><?php echo $mnfr;?></td>	  
 		</tr>
 	</table>
-	<div class="height-5"></div>
+	<div class="height-10"></div>
 	<table class="w3-table w3-table-all w3-striped">
 		<thead>
 			<tr>
@@ -125,8 +126,9 @@
 	mssql_free_result($rsl);  
 ?>
 	
-	</tbody>
-  </table>
+		</tbody>
+	</table>
+	<div class="height-10"></div>
 </div>  
 
 <script language="text/JavaScript">   
