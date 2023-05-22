@@ -73,7 +73,7 @@
 		$principle = "";
 		$consigne = "";
 		$estimateDate = "";
-		$hasil = "";
+		$hasil = 0;
   
 		if($arr['principle']!="") { $principle = haveCustomerName($arr['principle']); }
 		
