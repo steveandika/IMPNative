@@ -80,13 +80,13 @@
 		$kodeBooking = str_replace(" ","",$arr["bookInID"]);
 		$stmt = mssql_init("C_GetInfoAlreadyBilled");
         mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
-	    mssql_bind($stmt, "@Result", $hasil, SQLVARCHAR, false, false, 30);
+	    mssql_bind($stmt, "@Result", $hasil, SQLVARCHAR, true, false, 30);
 	    $result = mssql_execute($stmt);
 	    mssql_free_statement($stmt);	
 		
 		echo '<tr>';
 	
-		if(($arr['InvoiceNumber'] != '') && ($hasil > 0)) 
+		if(($arr['InvoiceNumber'] != '') || ($hasil > 0)) 
 		{ 
 			$html = '';
 			$html .= '<td><i class="fa fa-lock" aria-hidden="true" style="font-size:15px"></i></td>';
