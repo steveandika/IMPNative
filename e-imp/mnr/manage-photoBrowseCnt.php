@@ -11,7 +11,7 @@
 				terkait sudah berada di dalam daftar Invoicing.</p>	
 	<div class="height-10"></div>
 	
-	<div class="w3-container w3-responsive">   
+	<div class="w3-container w3-responsive w3-light-grey w3-round-large">   
 		<table class="w3-table w3-table-all w3-striped">
 			<thead>
 				<tr> 
