@@ -31,7 +31,7 @@
 		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' and workshopID= '$workshopID' order by gateIn DESC; ";
 	}	
 	//echo strtoupper($_SESSION["uid"]).$query."<br>";  
-	$result = mssql_query($query);    	
+	$rsl = mssql_query($query);    	
 	
 ?>
 
@@ -68,7 +68,7 @@
 				</tr></thead><tbody>	
 	   
 <?php
-	while($arr = mssql_fetch_array($result)) 
+	while($arr = mssql_fetch_array($rsl)) 
 	{
 		$principle = "";
 		$consigne = "";
@@ -122,7 +122,7 @@
 				<td>'.$arr['DTMOut'].'</td>
 				</tr>';
 	}
-	mssql_free_result($result);  
+	mssql_free_result($rsl);  
 ?>
 	
 	</tbody>
