@@ -83,7 +83,7 @@
 		
 		echo '<tr>';
 	
-		if($arr['InvoiceNumber'] != '' && $result == 0) 
+		if(($arr['InvoiceNumber'] != '') || ($result == 0)) 
 		{ 
 			$html = '';
 			$html .= '<td><i class="fa fa-lock" aria-hidden="true" style="font-size:15px"></i></td>';
