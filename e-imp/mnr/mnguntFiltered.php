@@ -79,7 +79,7 @@
         mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
 	    mssql_bind($stmt, "@Result", $result, SQLVARCHAR, false, false, 30);
 	    $result = mssql_execute($stmt);
-	    mssql_free_statement($stmt);	
+	    //mssql_free_statement($stmt);	
 		
 		echo '<tr>';
 	
