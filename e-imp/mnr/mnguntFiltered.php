@@ -30,7 +30,7 @@
 	{
 		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' and workshopID= '$workshopID' order by gateIn DESC; ";
 	}	
-	{ echo strtoupper($_SESSION["uid"]).$query."<br>"; }
+	echo strtoupper($_SESSION["uid"]).$query."<br>"; 
 	$result = mssql_query($query);    	
 	
 ?>
