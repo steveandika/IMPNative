@@ -21,6 +21,18 @@
 		$mnfr = $arr['Mnfr']; 	 
 	}
 	mssql_free_result($result);
+
+	if ($workshopID == "ALL")
+	{
+		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' order by gateIn DESC; ";
+	}
+	else
+	{
+		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' and workshopID= '$workshopID' order by gateIn DESC; ";
+	}	
+	if (strtoupper($_SESSION["uid"])=="ROOT") { echo $query."<br>"; }
+	$result = mssql_query($query);    	
+	
 ?>
 
 <div style="overflow-x:auto;height:65vh;">
@@ -56,16 +68,6 @@
 				</tr></thead><tbody>	
 	   
 <?php
-	if ($workshopID == "ALL")
-	{
-		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' order by gateIn DESC; ";
-	}
-	else
-	{
-		$query="Select * From view_Summary_Hamparan Where NoContainer='$noCnt' and workshopID= '$workshopID' order by gateIn DESC; ";
-	}	
-	$result=mssql_query($query);    
-	if (strtoupper($_SESSION["uid"])=="ROOT") { echo $query."<br>"; }
 	while($arr = mssql_fetch_array($result)) 
 	{
 		$principle = "";
