@@ -70,13 +70,20 @@
 		$principle = "";
 		$consigne = "";
 		$estimateDate = "";
+		$result = ""
   
 		if($arr['principle']!="") { $principle = haveCustomerName($arr['principle']); }
 		
-		$kodeBooking=str_replace(" ","",$arr["bookInID"]);
+		$kodeBooking = str_replace(" ","",$arr["bookInID"]);
+		$stmt = mssql_init("C_GetInfoAlreadyBilled");
+        mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
+	    mssql_bind($stmt, "@Result", $result, SQLVARCHAR, false, false, 30);
+	    $result = mssql_execute($stmt);
+	    mssql_free_statement($stmt);	
+		
 		echo '<tr>';
 	
-		if ($arr['InvoiceNumber'] != '') 
+		if($arr['InvoiceNumber'] != '' && $result == 0) 
 		{ 
 			$html = '';
 			$html .= '<td><i class="fa fa-lock" aria-hidden="true" style="font-size:15px"></i></td>';
