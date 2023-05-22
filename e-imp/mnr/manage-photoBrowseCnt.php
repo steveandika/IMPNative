@@ -5,7 +5,8 @@
 </script>
    <p><strong>* Catatan:</strong><br>
     Hasil dari pencarian nomor Container dibatasi pada 2 kegiatan terakhir ditandai dengan adanya Survey, dan 2 kegiatan
-    terakhir di mana tidak ada kegiatan Survey pada Container ybs.</p>	
+    terakhir di mana tidak ada kegiatan Survey pada Container ybs. Jika link untuk edit/upload tidak muncul, menandakan bahwa EoR 
+	terkait sudah berada di dalam daftar Invoicing.</p>	
    <div class="height-10"></div>
    <table class="w3-table w3-table-all w3-striped">
      <thead>
