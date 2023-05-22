@@ -67,63 +67,7 @@
 				<th>Workshop Out</th>
 				</tr></thead><tbody>	
 	   
-<?php
-	while($arr = mssql_fetch_array($result)) 
-	{
-		$principle = "";
-		$consigne = "";
-		$estimateDate = "";
-		$result = "";
-  
-		if($arr['principle']!="") { $principle = haveCustomerName($arr['principle']); }
-		
-		$kodeBooking = str_replace(" ","",$arr["bookInID"]);
-		$stmt = mssql_init("C_GetInfoAlreadyBilled");
-        mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
-	    mssql_bind($stmt, "@Result", $result, SQLVARCHAR, false, false, 30);
-	    $result = mssql_execute($stmt);
-	    mssql_free_statement($stmt);	
-		
-		echo '<tr>';
-	
-		if(($arr['InvoiceNumber'] != '') ) 
-		{ 
-			$html = '';
-			$html .= '<td><i class="fa fa-lock" aria-hidden="true" style="font-size:15px"></i></td>';
-			echo $html;
-		} 
-		else 
-		{
-			echo '<td></td>';
-		}		
-?>				         
-        
-		<td>
-			<a onclick=openDetail('<?php echo $arr["NoContainer"]?>&transid=<?php echo $kodeBooking?>') class="w3-text-blue"  style="cursor:pointer" ><?php echo $arr["bookInID"];?></a>
-		</td>
-					
-<?php
-		echo '	<td>'.date('Y-m-d', strtotime($arr['gateIn'])).'</td>';
-			
-		if (date('Y-m-d', strtotime($arr['estimateDate'])) != '1970-01-01')
-		{
-			echo '<td>'.date('Y-m-d', strtotime($arr['estimateDate'])).'</td>';
-		} 
-		else 
-		{
-			echo '<td></td>';
-		}	
-	
-		echo '	<td>'.$arr['estimateID'].'</td>
-				<td>'.$arr['tanggalApprove'].'</td>
-				<td>'.$arr['CRDate'].'</td>
-				<td>'.$arr['CCleaning'].'</td>
-				<td>'.$principle.'</td>
-				<td>'.$arr['DTMOut'].'</td>
-				</tr>';
-	}
-	mssql_free_result($result);  
-?>
+
 	
 	</tbody>
   </table>
