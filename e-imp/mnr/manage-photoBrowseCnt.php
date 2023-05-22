@@ -25,20 +25,41 @@
     $query="Select * From view_Summary_Hamparan where NoContainer='$keywrd' order by gateIn Desc;";
 	$resl = mssql_query($query);
 	while($arr = mssql_fetch_array($resl)) {
-	  $urlvar = 'get_album.php?id='.$arr["bookInID"].'&unit='.$keywrd;
-	  $index++;
+		$urlvar = 'get_album.php?id='.$arr["bookInID"].'&unit='.$keywrd;
+		$index++;
 	  
-	  echo '<tr>
-	         <td>'.$arr["bookInID"].'</td>';
+		echo '<tr>
+				<td>'.$arr["bookInID"].'</td>';
              
 ?>
 			 <td>			
+<?php
+		$hasil = 0;
+		$kodeBooking = str_replace(" ","",$arr["bookInID"]);
+		$stmt = mssql_init("C_GetInfoAlreadyBilled");
+		mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
+		mssql_bind($stmt, "@Result", $hasil, SQLVARCHAR, true, false, 30);
+		$result = mssql_execute($stmt);
+		mssql_free_statement($stmt);
+		
+		if($hasil == 0)
+		{
+?>
+			 
               <form action="get-album" name="form_".$index." target="_blank" method="get">						
 			    <input type="hidden" name="reg" value="<?php echo base64_encode($arr['bookInID'])?>" />
 				<input type="hidden" name="eq" value="<?php echo base64_encode($keywrd)?>" />				
 				<button class="w3-text-blue" style="border:none;background:none;font-weight:500;outline:none">
 				<?php echo date('Y-m-d', strtotime($arr['gateIn']))?></button>
 			  </form>	
+
+<?php
+		}
+		else
+		{
+			echo date('Y-m-d', strtotime($arr['gateIn']))
+		}
+?>	  
 			 </td>
 				
 <?php
