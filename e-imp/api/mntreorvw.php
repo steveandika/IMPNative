@@ -22,12 +22,12 @@
 				
 				if($op == "EoRIConS")
 				{
-					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSGrouping Where shortName = '$liner' And workshopID = '$wh'");					
+					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONS Where shortName = '$liner' And workshopID = '$wh'");					
 				}
 		
 				if($op == "EoRPDF")
 				{
-					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSPDFGrouping Where shortName = '$liner' And workshopID = '$wh'");				
+					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSPDF Where shortName = '$liner' And workshopID = '$wh'");				
 				}
 				
 				include("layout1mntreor.php");			
