@@ -56,8 +56,13 @@
 							{
 								$html = "";
 								$html .= "<tr>";
+								$html .= "	<td>".$index."</td>";
 								$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 								$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
+								$html .= "	<td>".$rsl[$i]["containerID"]."</td>";
+								$html .= "	<td>".$rsl[$i]["gateIn"]."</td>";
+								$html .= "	<td>".$rsl[$i]["estimateID"]."</td>";
+								$html .= "	<td>".$rsl[$i]["currencyAs"]."</td>";								
 								
 								if($op == "EoRIConS")
 								{									
