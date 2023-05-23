@@ -22,26 +22,28 @@
 				<table class="w3-table w3-bordered">
 					<tr>
 						<th>Index</th>
-						<th>Shipping Line</th>
-						<th>Hamparan</th>
-						<?php 
-							$html = "";
-							
-							if($op == "EoRIConS")
-							{
-								$html .= "<th style='text-align:right;'>Owner</th>";
-								$html .= "<th style='text-align:right;'>User 1</th>";
-								$html .= "<th style='text-align:right;'>User 2</th>";
-								$html .= "<th style='text-align:right;'>3rdParty</th>";
-							}
-							
-							if($op == "EoRPDF")
-							{
-								$html .= "<th style='text-align:right;'>Total Before Tax</th>";								
-							}
-							
-							echo $html;
-						?>
+						<th>Shipping Line</th>			
+						<th>Hamparan</th>		
+						<th>Container ID</th>
+						<th>Gate In</th>
+						<th>EoR ID</th>
+						<th>Currency</th>						
+						
+					<?php
+						$html = '';
+						if($op == "EoRIConS")
+						{							
+							$html .= '<th style="text-align:right;">Owner</th>';
+							$html .= '<th style="text-align:right;">User 1</th>';
+							$html .= '<th style="text-align:right;">User 2</th>';
+							$html .= '<th style="text-align:right;">3rdParty</th>';	
+						}
+						else 
+						{
+							$html .= '<th style="text-align:right;">Before Tax</th>';								
+						}
+						echo $html;
+						
 					</tr>
 				
 					<?php	
