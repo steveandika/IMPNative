@@ -5,12 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
 		<title>IMP | Integrated Container System</title>
-		<link rel="shortcut icon" href="asset/img/office.png" type="image/x-icon" />    
-		<link rel="stylesheet" type="text/css" href="asset/css/master.css" /> 
+		<link rel="shortcut icon" href="../asset/img/office.png" type="image/x-icon" />    
+		<link rel="stylesheet" type="text/css" href="../asset/css/master.css"  /> 
 	</head>
 	<body>
 		<?php
-			include("../asset/libs/new_db.php");
+			include($_SERVER["DOCUMENT_ROOT"]."/asset/libs/new_db.php");
 	
 			if((isset($_GET["h"])) && (isset($_GET["doc"])) && (isset($_GET["shpl"]))) 
 			{
