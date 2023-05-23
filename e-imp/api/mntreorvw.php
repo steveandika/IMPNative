@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<?php
-			include($_SERVER["DOCUMENT_ROOT"]."/asset/libs/new_db.php");
+			include($_SERVER["DOCUMENT_ROOT"]."e-imp/asset/libs/new_db.php");
 	
 			if((isset($_GET["h"])) && (isset($_GET["doc"])) && (isset($_GET["shpl"]))) 
 			{
