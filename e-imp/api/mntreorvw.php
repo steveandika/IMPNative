@@ -13,12 +13,13 @@
 			include($_SERVER["DOCUMENT_ROOT"]."e-imp/asset/libs/new_db.php");
 	
 			if((isset($_GET["h"])) && (isset($_GET["doc"])) && (isset($_GET["shpl"]))) 
-			{
+			{					
+				$op = trim(str_replace("'"," ",$_GET["doc"]));
+				$wh = trim(str_replace("'"," ",$_GET["h"]));
+				$liner = trim(str_replace("'"," ",$_GET["shpl"]));
+				
 				$obj = new DatabaseClass ();
-		
-				$op = $_GET["doc"];
-				$wh = $_GET["h"];
-				$liner = $_GET["shpl"];
+				
 				if($op == "EoRIConS")
 				{
 					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSGrouping Where shortName = '$liner' And workshopID = '$wh'");					
