@@ -16,16 +16,17 @@
 			{
 				$obj = new DatabaseClass ();
 		
-				$op = $_GET["w"];
+				$op = $_GET["doc"];
+				$wh = $_GET["h"];
 				$liner = $_GET["shpl"];
 				if($op == "EoRIConS")
 				{
-					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSGrouping Where shortName = '$liner'");					
+					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSGrouping Where shortName = '$liner' And workshopID = '$wh'");					
 				}
 		
 				if($op == "EoRPDF")
 				{
-					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSPDFGrouping Where shortName = '$liner'");				
+					$rsl = $obj -> get_listMntrEoRFin("VIEW_MonitoringEstimateICONSPDFGrouping Where shortName = '$liner' And workshopID = '$wh'");				
 				}
 				
 				include("layout1mntreor.php");			
