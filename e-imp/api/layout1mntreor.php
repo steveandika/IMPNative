@@ -1,4 +1,4 @@
-		<div class="w3-container w3-responsive>
+		<div class="w3-container w3-responsive">
 		    <div class="height-10"></div>
 			<div class="w3-container w3-light-grey w3-round-large">
 				<div class="height-10"></div>
@@ -89,4 +89,5 @@
 				</table>
 				<div class="height-10"></div>
 			</div>	
+			<div class="height-10"></div>
 		</div>
