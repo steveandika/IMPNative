@@ -43,6 +43,7 @@
 							$html .= '<th style="text-align:right;">Before Tax</th>';								
 						}
 						echo $html;
+					?>
 						
 					</tr>
 				
