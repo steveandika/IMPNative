@@ -12,7 +12,7 @@
 		<?php
 			include("../asset/libs/new_db.php");
 	
-			if((isset($_GET["h"])) && (isset($_GET["doc"])) (isset($_GET["shpl"]))) 
+			if((isset($_GET["h"])) && (isset($_GET["doc"])) && (isset($_GET["shpl"]))) 
 			{
 				$obj = new DatabaseClass ();
 		
