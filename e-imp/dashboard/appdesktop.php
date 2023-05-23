@@ -37,16 +37,7 @@
 			<div class="w3-row-padding">
 	    
 				<div class="w3-third">
-					<div class="bluebox">
-						<?php
-							$html = '';
-							$html .= '<div class="bluebox-link">';
-							$html .= ' <a href="'.$defHTML.'/dashboard/EDI.7z" style="color:#EAF937;text-decoration:none!important">';
-							$html .= ' Electronic Data Interchange (EDI)</a></div>';
-							$html .= '<div class="bluebox-desc">Updated: Feb 01, 2021 07:23</div>';
-			   
-							echo $html;
-						?> 			 
+					<div class="bluebox">&nbsp;
 					</div>
 				</div>  
 				<div class="w3-third"></div>
@@ -55,9 +46,9 @@
 						<?php
 							$html = '';
 							$html .= '<div class="bluebox-link">';			   
-							$html .= ' <a href="'.$defHTML.'/e-imp/dashboard/FinTool2_8.zip" style="color:#EAF937;text-decoration:none!important">';
+							$html .= ' <a href="'.$defHTML.'/e-imp/dashboard/FinTool2_9.zip" style="color:#EAF937;text-decoration:none!important">';
 							$html .= ' Finance Tool</a></div>';
-							$html .= '<div class="bluebox-desc">Updated: May 9, 2022 17:34</div>';
+							$html .= '<div class="bluebox-desc">Updated: May 23, 2023 14:58</div>';
 			   
 							echo $html;
 						?> 			 
