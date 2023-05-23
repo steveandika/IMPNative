@@ -56,7 +56,6 @@
 							{
 								$html = "";
 								$html .= "<tr>";
-								$html .= "	<td>".$index."</td>";
 								$html .= "	<td>".$rsl[$i]["shortName"]."</td>";
 								$html .= "	<td>".$rsl[$i]["workshopID"]."</td>";
 								
