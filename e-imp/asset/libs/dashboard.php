@@ -4,7 +4,8 @@
   
 	$groupFin = array("AKU2182","DAP2203","HNA2171","JUN2171","JNU2183","LYA2211","RAN2182","JOK001","ROOT", "RSO2171","RYO2201","SRE2211");
 	$groupRoot = array("JOK001", "ROOT");	
-    $masterData = array("ROK2171", "JOK001","ROOT")
+    $masterData = array("ROK2171", "JOK001","ROOT");
+	$monitoringEOR = array("DAP2203", "JOK001", "RSO2171", "HNA2171");
 ?>
 
 <div class="header">
@@ -68,9 +69,13 @@
         $html .= '<a href="?p=w_fns" class="sub-menu-link">Waiting C/R</a>';
 		//$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-sumRepair.php").'" class="sub-menu-link padding-left-15">Summary Repair</a>'; 
 		/*$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/mntreor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; */
-		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/monitoring-eor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; 
-		$html .= '<div class="height-5"></div>';
 		
+		if (in_array(strtoupper($_SESSION['uid']), $monitoringEOR))
+		{	
+			$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/monitoring-eor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; 
+		}
+		
+		$html .= '<div class="height-5"></div>';		
 		$html .= '</div>';
 		
 		if (validMenuAccess("32") == 1 || strtoupper($_SESSION["uid"]) == "JOK001" ) 
