@@ -48,7 +48,7 @@
 							$html .= '<div class="bluebox-link">';			   
 							$html .= ' <a href="'.$defHTML.'/e-imp/dashboard/FinTool2_10.zip" style="color:#EAF937;text-decoration:none!important">';
 							$html .= ' Finance Tool</a></div>';
-							$html .= '<div class="bluebox-desc">Updated: May 24, 2023 15:58</div>';
+							$html .= '<div class="bluebox-desc">Updated: May 25, 2023 05:00</div>';
 			   
 							echo $html;
 						?> 			 
