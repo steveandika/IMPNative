@@ -80,13 +80,13 @@
 	
 	function toggleSideNav() 
 	{		
-		if (document.getElementById("sideBar").style.left == "0px") {
+		if (document.getElementById("sideBar").style.left == "0px") 
+		{
 			document.getElementById("sideBar").style.left = "-250px";	
-			document.getElementById("sideBar").style.width = "250px";	
 		} 
-		else {
-			document.getElementById("sideBar").style.left = "0px";	
-			document.getElementById("sideBar").style.width = "100%";
+		else 
+		{
+			document.getElementById("sideBar").style.left = "0px";			
 		}		  
 	}
 </script>
