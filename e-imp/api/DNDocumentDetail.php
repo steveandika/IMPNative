@@ -12,6 +12,8 @@
 		$liner = $_POST['liner'];
 		$activity = $_POST['act'];
 		$docdate = $_POST['docdate'];
+		$hamparan = $_POST['hamparan'];
+		$jenisEOR = $_POST['jenisEOR'];
 		$res = "";
 		
 		$sql = "EXEC C_DNDocumentDetail 
@@ -25,6 +27,8 @@
 					@shortName = '$liner',
 					@activityType = '$activity',
 					@DocDate = '$docdate',
+					@Workshop = '$hamparan',
+					@jenisEOR = '$jenisEOR',
 					@Result = '$res'; ";
 		
 		include($_SERVER["DOCUMENT_ROOT"]."/asset/libs/common.php");
