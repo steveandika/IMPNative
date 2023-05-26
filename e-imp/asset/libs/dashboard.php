@@ -5,7 +5,7 @@
 	$groupFin = array("AKU2182","DAP2203","HNA2171","JUN2171","JNU2183","LYA2211","RAN2182","JOK001","ROOT", "RSO2171","RYO2201","SRE2211");
 	$groupRoot = array("JOK001", "ROOT");	
     $masterData = array("ROK2171", "JOK001","ROOT");
-	$monitoringEOR = array("DAP2203", "JOK001", "RSO2171", "HNA2171");
+	$monitoringEOR = array("DAP2203", "JOK001", "RSO2171", "HNA2171", "ROOT");
 ?>
 
 <div class="header">
