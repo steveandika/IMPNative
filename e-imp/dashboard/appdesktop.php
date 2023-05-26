@@ -15,7 +15,7 @@
   <script src="../asset/js/jquery.min.2.1.1.js"></script>  
 </head>
 
-<body style="overflow-y:auto!important">
+<body>
 	<?php
 		if(!isset($_SESSION["uid"])) 
 		{
@@ -46,7 +46,7 @@
 						<?php
 							$html = '';
 							$html .= '<div class="bluebox-link">';			   
-							$html .= ' <a href="'.$defHTML.'/e-imp/dashboard/FinTool2_12.zip" style="color:#EAF937;text-decoration:none!important">';
+							$html .= ' <a href="'.$defHTML.'/e-imp/dashboard/FinTool2_13.zip" style="color:#EAF937;text-decoration:none!important">';
 							$html .= ' Finance Tool</a></div>';
 							$html .= '<div class="bluebox-desc">Updated: May 25, 2023 15:27</div>';
 			   
