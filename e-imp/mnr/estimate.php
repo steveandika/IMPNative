@@ -655,327 +655,382 @@
 	<input type="hidden" name="height" value="<?php echo $height;?>" />
 	<input type="hidden" name="whatToDo" value="" />
 
-	<table class="w3-bordered">
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Size/Type/Height</strong></td>
-		<td style="border-right:1px solid #ddd"><?php echo $sizeCode;?></td>
-		<td style="border-right:1px solid #ddd"><strong>Hamparan/Workshop In</strong></td>
-		<td><?php echo $tglMasuk;?></td>
-	  </tr>
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Survey</strong></td>
-		<td style="border-right:1px solid #ddd"><?php echo $tglSurvey;?></td>
-		<td style="border-right:1px solid #ddd"><strong>Surveyor</strong></td>
-		<td><?php echo $surveyor;?></td>
-	  </tr>		  
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Estimate Number</strong></td>
-		<td style="border-right:1px solid #ddd"><strong><?php echo $kodeEstimate;?></strong></td>
-		<td style="border-right:1px solid #ddd"><strong>Submitted Estimate</strong></td>
-		<td><?php echo $tanggalEOR." - ".$statusEstimate;?></td>
-	  </tr>	  
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Approved Date</strong></td>
-		<td style="border-right:1px solid #ddd"><strong><?php echo $tglApp;?></strong></td>
-		<td colspan="2"></td>
-	  </tr>	  
+	<table class="w3-table w3-bordered">
+		<tr>
+			<td><strong>Size/Type/Height</strong></td>
+			<td>:<?php echo $sizeCode;?></td>
+			<td><strong>Hamparan/Workshop In</strong></td>
+			<td>:<?php echo $tglMasuk;?></td>
+		</tr>
+		<tr>
+			<td><strong>Survey</strong></td>
+			<td>:<?php echo $tglSurvey;?></td>
+			<td><strong>Surveyor</strong></td>
+			<td>:<?php echo $surveyor;?></td>
+		</tr>		  
+		<tr>
+			<td><strong>Estimate Number</strong></td>
+			<td>:<?php echo $kodeEstimate;?></td>
+			<td><strong>Submitted Estimate</strong></td>
+			<td>:<?php echo $tanggalEOR." - ".$statusEstimate;?></td>
+		</tr>	  
+		<tr>
+			<td><strong>Approved Date</strong></td>
+			<td>:<?php echo $tglApp;?></td>
+			<td colspan="2"></td>
+		</tr>	  
 	  
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Shipping Line/Principle</strong></td>
-		<td style="border-right:1px solid #ddd"><?php echo $principle;?></td>
-		<td style="border-right:1px solid #ddd"><strong>Ex. User</strong></td>
-		<td><?php echo substr($consignee,0,25).'..';?></td>
-	  </tr>	 	
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Ex. Vessel/Voyage</strong></td>
-		<td style="border-right:1px solid #ddd"><?php echo $vessel;?></td>
-		<td style="border-right:1px solid #ddd" colspan="2"></td>
-	  </tr>	  	  
+		<tr>
+			<td><strong>Shipping Line/Principle</strong></td>
+			<td>:<?php echo $principle;?></td>
+			<td><strong>Ex. User</strong></td>
+			<td>:<?php echo substr($consignee,0,25).'..';?></td>
+		</tr>	 	
+		<tr>
+			<td><strong>Ex. Vessel/Voyage</strong></td>
+			<td>:<?php echo $vessel;?></td>
+			<td colspan="2"></td>
+		</tr>	  	  
 
-	  <?php 
-		if($statusEstimate =="SUBMIT" || $statusEstimate =="APPROVE") 
-		{	
-	  ?>
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Exclude Tax</strong></td>
-		<td style="border-right:1px solid #ddd"><?php echo number_format($DPP,2,",",".");?></td>
-		<td style="border-right:1px solid #ddd"><strong>Total Man Hour</strong></td>
-		<td><?php echo number_format($totalMH,2,",",".");?></td>
-	  </tr>	 	
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Total Material</strong></td>
-		<td style="border-right:1px solid #ddd"><?php echo number_format($totalMaterial,2,",",".");?></td>
-		<td style="border-right:1px solid #ddd"><strong>Total Labor</strong></td>
-		<td><?php echo number_format($totalLabor,2,",",".");?></td>
-	  </tr>	    
-	  <?php 
-		} 
-	  ?>
-	  
-	  <tr>
-		<td style="border-right:1px solid #ddd"><strong>Price Code</strong></td>
-		<td style="border-right:1px solid #ddd">
-		<?php if($statusEstimate =="APPROVE") {  echo '<input type="text" class="style-input" readonly name="priceCode" style="text-align:right" value="'.$priceCode.'" />'; }
-			  else {
-				$cmd="SELECT DISTINCT a.priceCode FROM m_RepairPriceList a 
-					  INNER JOIN m_RepairPriceList_Header b ON b.priceCode=a.priceCode 
-					  ORDER BY priceCode";
-				$resl=mssql_query($cmd);  
-				$design="";
-				$design=$design.'<select name="priceCode" required class="style-select">';
-				while($arrFetch = mssql_fetch_array($resl)) 
-				{
-				  if($priceCode == $arrFetch[0]) {$design=$design.'<option selected value="'.$arrFetch[0].'">&nbsp;'.strtoupper($arrFetch[0]).'</option>'; }
-				  else { $design=$design.'<option value="'.$arrFetch[0].'">&nbsp;'.strtoupper($arrFetch[0]).'</option>'; }	
-				}	
-				$design=$design.'</select>';
-				
-				mssql_free_result($resl);	
-				echo $design;
-			  }	  
+		<?php 
+			if($statusEstimate =="SUBMIT" || $statusEstimate =="APPROVE") 
+			{	
 		?>
+			<tr>
+				<td><strong>Exclude Tax</strong></td>
+				<td>:<?php echo number_format($DPP,2,",",".");?></td>
+				<td><strong>Total Man Hour</strong></td>
+				<td>:<?php echo number_format($totalMH,2,",",".");?></td>
+			</tr>	 	
+			<tr>
+				<td><strong>Total Material</strong></td>
+				<td>:<?php echo number_format($totalMaterial,2,",",".");?></td>
+				<td><strong>Total Labor</strong></td>
+				<td>:<?php echo number_format($totalLabor,2,",",".");?></td>
+			</tr>	    
+		<?php 
+			} 
+		?>
+	  
+		<tr>
+			<td><strong>Price Code</strong></td>
+			<td>
+			
+			<?php if($statusEstimate =="APPROVE") 
+				{  
+					echo '<input type="text" class="style-input" readonly name="priceCode" style="text-align:right" value="'.$priceCode.'" />'; 
+				}
+				else
+				{	
+					$cmd="SELECT DISTINCT a.priceCode FROM m_RepairPriceList a 
+						INNER JOIN m_RepairPriceList_Header b ON b.priceCode=a.priceCode 
+						ORDER BY priceCode";
+					$resl=mssql_query($cmd);  
+					$design="";
+					$design=$design.'<select name="priceCode" required class="style-select">';
+					while($arrFetch = mssql_fetch_array($resl)) 
+					{
+						if($priceCode == $arrFetch[0]) {$design=$design.'<option selected value="'.$arrFetch[0].'">&nbsp;'.strtoupper($arrFetch[0]).'</option>'; }
+						else { $design=$design.'<option value="'.$arrFetch[0].'">&nbsp;'.strtoupper($arrFetch[0]).'</option>'; }	
+					}	
+					$design=$design.'</select>';
+				
+					mssql_free_result($resl);	
+					echo $design;
+				}	  
+			?>
+			
 		</td>
-		<td style="border-right:1px solid #ddd"><strong>Labor Rate</strong></td>
+		<td><strong>Labor Rate</strong></td>
 		<td>
-		<?php
-			if($statusEstimate =="APPROVE") 
-			{ 
-				echo '<input type="text" class="style-input" readonly name="laborDepo" style="text-align:right" value="'.$labour.'" />'; 
-			}
-			else 
-			{
-				$design = '<select name="laborDepo" class="style-input">';
+		
+			<?php
+				if($statusEstimate =="APPROVE") 
+				{ 
+					echo '<input type="text" class="style-input" readonly name="laborDepo" style="text-align:right" value="'.$labour.'" />'; 
+				}
+				else 
+				{
+					$design = '<select name="laborDepo" class="style-input">';
 
-				if ($labour == 30000) { $design .= ' <option selected value=30000>30.000 IDR</option>'; }
-				else { $design .= ' <option value=30000>30.000 IDR</option>'; }
-				if ($labour == 20000) { $design .= ' <option selected value=20000>20.000 IDR</option>'; }
-				else { $design .= ' <option value=20000>20.000 IDR</option>'; }	
-				if ($labour == 19000) { $design .= ' <option selected value=19000>19.000 IDR</option>'; }
-				else { $design .= ' <option value=19000>19.000 IDR</option>'; }	
-				if ($labour == 18000) { $design .= ' <option selected value=18000>18.000 IDR</option>'; }
-				else { $design .= ' <option value=18000>18.000 IDR</option>'; }								
-				if ($labour == 15000) { $design .= ' <option selected value=15000>15.000 IDR</option>'; }
-				else { $design .= ' <option value=15000>15.000 IDR</option>'; }								
-                if ($labour == 14500) { $design .= ' <option selected value=14500>14.500 IDR</option>'; }
-				else { $design .= ' <option value=14500>14.500 IDR</option>'; }				
-				if ($labour == 12500) { $design .= ' <option selected value=12500>12.500 IDR</option>'; }
-				else { $design .= ' <option value=12500>12.500 IDR</option>'; }
+					if ($labour == 30000) { $design .= ' <option selected value=30000>30.000 IDR</option>'; }
+					else { $design .= ' <option value=30000>30.000 IDR</option>'; }
+					if ($labour == 20000) { $design .= ' <option selected value=20000>20.000 IDR</option>'; }
+					else { $design .= ' <option value=20000>20.000 IDR</option>'; }	
+					if ($labour == 19000) { $design .= ' <option selected value=19000>19.000 IDR</option>'; }
+					else { $design .= ' <option value=19000>19.000 IDR</option>'; }	
+					if ($labour == 18000) { $design .= ' <option selected value=18000>18.000 IDR</option>'; }
+					else { $design .= ' <option value=18000>18.000 IDR</option>'; }								
+					if ($labour == 15000) { $design .= ' <option selected value=15000>15.000 IDR</option>'; }
+					else { $design .= ' <option value=15000>15.000 IDR</option>'; }								
+					if ($labour == 14500) { $design .= ' <option selected value=14500>14.500 IDR</option>'; }
+					else { $design .= ' <option value=14500>14.500 IDR</option>'; }				
+					if ($labour == 12500) { $design .= ' <option selected value=12500>12.500 IDR</option>'; }
+					else { $design .= ' <option value=12500>12.500 IDR</option>'; }
 				
-			    if ($labour == 1.04) { $design .= ' <option selected value=1.04>1.04 USD</option>'; }
-				else { $design .= ' <option value=1.04>1.04 USD</option>'; }
-				if ($labour == 1 || $labour == 1.2) { $design .= ' <option selected value=1.2>1.2 USD</option>'; }
-				else { $design .= ' <option value=1.2>1.2 USD</option>'; }
-				if ($labour == 1.12) { $design .= ' <option selected value=1.12>1.12 USD</option>'; }
-				else { $design .= ' <option value=1.12>1.12 USD</option>'; }
-				
+					if ($labour == 1.04) { $design .= ' <option selected value=1.04>1.04 USD</option>'; }
+					else { $design .= ' <option value=1.04>1.04 USD</option>'; }
+					if ($labour == 1 || $labour == 1.2) { $design .= ' <option selected value=1.2>1.2 USD</option>'; }
+					else { $design .= ' <option value=1.2>1.2 USD</option>'; }
+					if ($labour == 1.12) { $design .= ' <option selected value=1.12>1.12 USD</option>'; }
+					else { $design .= ' <option value=1.12>1.12 USD</option>'; }				
                   
-				$design .= '</select>';				
+					$design .= '</select>';				
 				
-				echo $design;  				
-			  }	  
-		?>
+					echo $design;  				
+				}	  
+			?>
+			
 		</td>
 	  </tr>	  
 	</table>
 	<div class="height-10"></div>
 
-	<ul class="flex-container">        
+	<ul class="flex-container">     
+	
 	<?php
 	/* status APPROVE, not allowed for editing */
-	if($statusEstimate != 'APPROVE' || strtoupper($_SESSION['uid'])=="ROOT") 
-	{
-	?>
-
-	  <li class="flex-item"><input type="button"  class="w3-button w3-green" name="newRow" onclick=addRow_mine("dataTable") value="New Row" /></li>
-	  <li class="flex-item"><input type="button" class="w3-button w3-red" name="delRow" onclick=deleteRow_mine('dataTable') value="Delete Marked Row" /></li>		  
-	  <li class="flex-item"><button type="submit"  class="w3-button w3-purple" value="CALCULATE" name="calculate" onclick='this.form.whatToDo.value = this.value;'>Review Entry</button></li>
-					 
-	<?php      
-		if (strtoupper($_SESSION["uid"])=="ROOT") { echo $statusEstimate; }
-		if($statusEstimate == 'SUBMIT' || $statusEstimate == 'DRAFT'  || strtoupper($_SESSION['uid'])=="ROOT") 
+		$hasil = 0;
+		
+		$stmt = mssql_init("C_GetInfoAlreadyBilled");
+		mssql_bind($stmt, "@BookID", $kodeBooking, SQLVARCHAR, false, false, 30);	  
+		mssql_bind($stmt, "@Result", $hasil, SQLVARCHAR, true, false, 30);
+		$result = mssql_execute($stmt);
+		mssql_free_statement($stmt);	
+		
+		/*if (strtoupper($_SESSION["uid"])=="ROOT") { echo $hasil; }*/
+		if($statusEstimate != 'APPROVE' && $hasil ==0) 
 		{
 	?>
 
-		  <li class="flex-item"><button type="submit"  class="w3-button w3-green" value="RESUBMIT" name="draft" onclick='this.form.whatToDo.value = this.value;'>Update Detail</button></li>			 
+			<li class="flex-item"><input type="button"  class="w3-button w3-green w3-border" name="newRow" onclick=addRow_mine("dataTable") value="New Row" /></li>&nbsp;
+			<li class="flex-item"><input type="button" class="w3-button w3-red w3-border" name="delRow" onclick=deleteRow_mine('dataTable') value="Delete Marked Row" /></li>&nbsp;		  
+			<li class="flex-item"><button type="submit"  class="w3-button w3-purple w3-border" value="CALCULATE" name="calculate" onclick='this.form.whatToDo.value = this.value;'>Review Entry</button></li>&nbsp;
+					 
+		<?php      
+			if (strtoupper($_SESSION["uid"])=="ROOT") { echo $statusEstimate; }
+			if($statusEstimate == 'SUBMIT' || $statusEstimate == 'DRAFT'  || strtoupper($_SESSION['uid'])=="ROOT") 
+			{
+		?>
 
-	<?php		  
-		}	
-		if($statusEstimate == '' || $statusEstimate=='DRAFT') 
-		{				  
-	?>		  
-		  <li class="flex-item"><button type="submit" class="w3-button w3-pale-blue" value="DRAFT" name="draft" onclick='this.form.whatToDo.value = this.value;'>Save As Draft</button></li>
-		  <li class="flex-item"><button type="submit" class="w3-button w3-blue" value="SUBMIT" name="draft" onclick='this.form.whatToDo.value = this.value;'>Submit As EOR</button></li>			 
+				<li class="flex-item"><button type="submit"  class="w3-button w3-green w3-border" value="RESUBMIT" name="draft" onclick='this.form.whatToDo.value = this.value;'>Update Detail</button></li>&nbsp;			 
+
+		<?php		  
+			}	
+			
+			if($statusEstimate == '' || $statusEstimate=='DRAFT') 
+			{				  
+		?>
+		
+				<li class="flex-item"><button type="submit" class="w3-button w3-pale-blue w3-border" value="DRAFT" name="draft" onclick='this.form.whatToDo.value = this.value;'>Save As Draft</button></li>&nbsp;
+				<li class="flex-item"><button type="submit" class="w3-button w3-blue w3-border" value="SUBMIT" name="draft" onclick='this.form.whatToDo.value = this.value;'>Submit As EOR</button></li>&nbsp;			 
 						
 	<?php
+			}
 		}
-	}
+		
+		if($hasil > 0)
+		{
+			echo '<li class="flex-item"><input type="button"  class="w3-button w3-border" value="Sudah Dalam Attachment Penagihan" /></li>&nbsp;';
+		}
+		if($statusEstimate == 'APPROVE')
+		{
+			echo '<li class="flex-item"><input type="button"  class="w3-button w3-border" value="Status EoR: APPROVED" /></li>&nbsp;';
+		}
 
-	if($statusEstimate == 'SUBMIT' || $statusEstimate == 'APPROVE') 
-	{	
-	  echo '<li class="flex-item"><div class="w3-dropdown-hover">
-			  <button class="w3-button w3-gray">Print Preview</button>
-			  <div class="w3-dropdown-content w3-bar-block w3-border">
-				<a class="w3-bar-item w3-button" href="print_eor?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'" target="_blank">Estimate (Complete)</a>
-				<a class="w3-bar-item w3-button" href="print_eoronly?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'" target="_blank">Estimate Only</a>
-				<a class="w3-bar-item w3-button" href="print_eoronly?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&party=0" target="_blank">Estimate (Owner)</a>
-				<a class="w3-bar-item w3-button" href="print_eoronly?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&party=1" target="_blank">Estimate (User)</a>
-				<a class="w3-bar-item w3-button" href="viewPh?es='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&id=2" target="_blank">Image(Before Repair)</a>
-				<a class="w3-bar-item w3-button" href="viewPh?es='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&id=3" target="_blank">Image(After Repair)</a>
-				<a class="w3-bar-item w3-button" href="viewPh?es='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&id=1" target="_blank">Image(Complete)</a>
-			  </div>
-			</div></li>';
-	}
+		if($statusEstimate == 'SUBMIT' || $statusEstimate == 'APPROVE') 
+		{	
+			echo '<li class="flex-item"><div class="w3-dropdown-hover">
+					<button class="w3-button w3-light-gray w3-border">Print Preview</button>
+					<div class="w3-dropdown-content w3-bar-block w3-border">
+						<a class="w3-bar-item w3-button" href="print_eor?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'" target="_blank">Estimate (Complete)</a>
+						<a class="w3-bar-item w3-button" href="print_eoronly?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'" target="_blank">Estimate Only</a>
+						<a class="w3-bar-item w3-button" href="print_eoronly?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&party=0" target="_blank">Estimate (Owner)</a>
+						<a class="w3-bar-item w3-button" href="print_eoronly?id='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&party=1" target="_blank">Estimate (User)</a>
+						<a class="w3-bar-item w3-button" href="viewPh?es='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&id=2" target="_blank">Image(Before Repair)</a>
+						<a class="w3-bar-item w3-button" href="viewPh?es='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&id=3" target="_blank">Image(After Repair)</a>
+						<a class="w3-bar-item w3-button" href="viewPh?es='.$kodeEstimate.'&cnt='.$keywrd.'&bookid='.$kodeBooking.'&id=1" target="_blank">Image(Complete)</a>
+					</div>
+					</div>
+				  </li>';
+		}
 	?>		  
 	</ul>			  
 
 	<div class="height-10"></div>
 
-	 <table id="dataTable" class="w3-bordered">
-	  <thead>
-		 <tr>
-		   <th></th>
-		   <th>*Loc</th>
-		   <th>*Part</th>
-		   <th>*Dmg</th>
-		   <th>*Act</th>
-		   <th>*Length</th>
-		   <th>*Width</th>
-		   <th>*Qty</th>
-		   <th>*Party</th>
-		   <th>Descrp.</th>
-		   <th>M/H</th>
-		   <th>Labor</th>
-		   <th>Mtrl.</th>
-		   <th>Total</th>
-		 </tr>
-	  </thead>
+	 <table id="dataTable" class="w3-table w3-bordered">
+		<thead>
+			<tr>
+				<th></th>
+				<th>*Loc</th>
+				<th>*Part</th>
+				<th>*Dmg</th>
+				<th>*Act</th>
+				<th>*Length</th>
+				<th>*Width</th>
+				<th>*Qty</th>
+				<th>*Party</th>
+				<th>Descrp.</th>
+				<th>M/H</th>
+				<th>Labor</th>
+				<th>Mtrl.</th>
+				<th>Total</th>
+			</tr>
+		</thead>
 
-	  <tbody>
-		 <?php
-		   if($validateGrid == "View Result") {
-			 for($i=0; $i<$totalBaris; $i++) {
-			   $filledRow=0;	 
-			   if(trim($loc[$i])!= '') {			
-				 $filledRow++;		
-								 
-		 ?>
-		 
-		 <tr>		 
-		   <td>
-			 <?php /*if($status[$i]=="REVIEWED") { echo '<input type="checkbox" name="chk[]" onclick="return false" style="margin-top:8px">'; }
-				   else { echo '<input type="checkbox" name="chk[]" style="margin-top:8px">'; } */
-				   $power_user=array("ROOT","JOK001");
-				   
-				   if(in_array(strtoupper($_SESSION["uid"]), $power_user)) {				   
-					 if($status[$i]=="REVIEWED") { echo '<select class="style-select" name="isNAT[]">'; }
-					 else { echo '<select class="style-select" name="isNAT[]" disabled>'; } 
-					 if($nat[$i]=="Y") { echo '<option selected value="Y">NAT&nbsp;</option>'; }
-					 else  { echo '<option value="Y">NAT&nbsp;</option>'; }
-					 if($nat[$i]=="N") { echo '<option selected value="N">&nbsp;</option>'; }
-					 else  { echo '<option value="RECALL">RECALL&nbsp;</option>'; }
-				   
-					 echo '</select>';
-				   } else { echo '<input type="hidden" name="isNAT[]" value="N" />'; }
-			 ?>
-			 <input type="hidden" name="status[]" value="<?php echo $status[$i]?>" readonly />  
-		   </td>
-		   <td><input type="text" class="style-input " name="loc[]" style="text-transform:uppercase;width:100px" value='<?php echo $loc[$i];?>' /></td>
-		   <td><input type="text" class="style-input " name="part[]" value='<?php echo $part[$i];?>' style="text-transform:uppercase;width:40px" /></td>
-		   <td><input type="text" class="style-input " name="dmg[]" value='<?php echo $dmg[$i];?>' style="text-transform:uppercase;width:50px" /></td>
-		   <td><input type="text" class="style-input " name="repair[]" value='<?php echo $repair[$i];?>' style="text-transform:uppercase;width:40px" /></td>
-		   <td><input type="text" class="style-input " name="length[]" value='<?php echo $length[$i];?>' onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
-		   <td><input type="text" class="style-input " name="Width[]" value='<?php echo $Width[$i];?>' onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
-		   <td><input type="text" class="style-input " name="qty[]" value='<?php echo $qty[$i];?>' onkeypress="return isNumber(event)" style="width:30px;text-align:right" /></td>
-		   <td><select id="party" class="style-select" name="party[]" style="width:40px">
-				<?php 
-				  if($party[$i] == "O") { echo '<option selected value="O">O</option>'; }
-				  else { echo '<option value="O">O</option>'; }
-				  if($party[$i] == "U" || $party[$i] == "U1") { echo '<option selected value="U1">U1</option>'; }
-				  else { echo '<option value="U1">U1</option>'; }
-				  if($party[$i] == "U2") { echo '<option selected value="U2">U2</option>'; }
-				  else { echo '<option value="U2">U2</option>'; }				  
-				  if($party[$i] == "T") { echo '<option selected value="T">T</option>'; }
-				  else { echo '<option value="T">T</option>'; }				  
-				?>
-				</select>
-		   </td>
-		   <td><input type="text" name="deskripsi[]" class="style-input " readonly value="<?php echo $deskripsi[$i];?>" /></td>
-		   <td><input type="hidden" class="style-input " name="mh[]" value='<?php echo $mh[$i];?>' />
-			   <input type="text" class="style-input " readonly value='<?php echo number_format($mh[$i],2,",",".");?>' style="width:40px;text-align:right" />
-		   </td>				
-		   <td><input type="hidden" class="style-input " name="labor[]" value='<?php echo $labor[$i];?>' />
-			   <input type="text" class="style-input " readonly value='<?php echo number_format($labor[$i],2,",",".");?>' style="width:60px;text-align:right" />
-		   </td>
-		   <td><input type="hidden" class="style-input " name="mtrl[]" value='<?php echo $material[$i];?>' />
-			   <input type="text" class="style-input " readonly value='<?php echo number_format($material[$i],2,",",".");?>' style="width:60px;text-align:right" />
-		   </td>
-		   <td><input type="hidden" class="style-input " name="subTotal[]" value='<?php echo $total[$i];?>' />
-			   <input type="text" class="style-input " readonly value='<?php echo number_format($total[$i],2,",",".");?>' style="width:80px;text-align:right" />
-		   </td>
-		  </tr>	  
-		
-		
+		<tbody>
 		<?php
-			   }
-			 }		 
-		   } 
+			if($validateGrid == "View Result") 
+			{			  
+				for($i=0; $i<$totalBaris; $i++) 
+				{
+					$filledRow=0;	 
+					if(trim($loc[$i])!= '') 
+					{			
+						$filledRow++;		
+								 
+		?>
+		 
+			<tr>		 
+				<td>
+					
+					<?php 
+						/*if($status[$i]=="REVIEWED") { echo '<input type="checkbox" name="chk[]" onclick="return false" style="margin-top:8px">'; }
+						else { echo '<input type="checkbox" name="chk[]" style="margin-top:8px">'; } */
+						
+						$power_user=array("ROOT","JOK001");
+				   
+						if(in_array(strtoupper($_SESSION["uid"]), $power_user)) 
+						{	
+							$html = '';
+							if($status[$i]=="REVIEWED") { $html .= '<select class="style-select" name="isNAT[]">'; }
+							else { $html .= '<select class="style-select" name="isNAT[]" disabled>'; } 
+							
+							if($nat[$i]=="Y") { $html .= '<option selected value="Y">NAT&nbsp;</option>'; }
+							else  { $html .= '<option value="Y">NAT&nbsp;</option>'; }
+							
+							if($nat[$i]=="N") { $html .= '<option selected value="N">&nbsp;</option>'; }
+							else  { $html .= '<option value="RECALL">RECALL&nbsp;</option>'; }
+				   
+							$html .= '</select>';
+							
+							echo $html;
+						} 
+						else 
+						{ 
+							echo '<input type="hidden" name="isNAT[]" value="N" />'; 
+						}
+					?>
+			 
+					<input type="hidden" name="status[]" value="<?php echo $status[$i]?>" readonly />  
+				</td>
+				<td><input type="text" class="style-input " name="loc[]" style="text-transform:uppercase;width:100px" value='<?php echo $loc[$i];?>' /></td>
+				<td><input type="text" class="style-input " name="part[]" value='<?php echo $part[$i];?>' style="text-transform:uppercase;width:40px" /></td>
+				<td><input type="text" class="style-input " name="dmg[]" value='<?php echo $dmg[$i];?>' style="text-transform:uppercase;width:50px" /></td>
+				<td><input type="text" class="style-input " name="repair[]" value='<?php echo $repair[$i];?>' style="text-transform:uppercase;width:40px" /></td>
+				<td><input type="text" class="style-input " name="length[]" value='<?php echo $length[$i];?>' onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
+				<td><input type="text" class="style-input " name="Width[]" value='<?php echo $Width[$i];?>' onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
+				<td><input type="text" class="style-input " name="qty[]" value='<?php echo $qty[$i];?>' onkeypress="return isNumber(event)" style="width:30px;text-align:right" /></td>
+				<td><select id="party" class="style-select" name="party[]" style="width:40px">
+				
+					<?php 
+						if($party[$i] == "O") { echo '<option selected value="O">O</option>'; }
+						else { echo '<option value="O">O</option>'; }
+						
+						if($party[$i] == "U" || $party[$i] == "U1") { echo '<option selected value="U1">U1</option>'; }
+						else { echo '<option value="U1">U1</option>'; }
+						
+						if($party[$i] == "U2") { echo '<option selected value="U2">U2</option>'; }
+						else { echo '<option value="U2">U2</option>'; }				  
+						
+						if($party[$i] == "T") { echo '<option selected value="T">T</option>'; }
+						else { echo '<option value="T">T</option>'; }				  
+					?>
+						
+					</select>
+				</td>
+				<td><input type="text" name="deskripsi[]" class="style-input " readonly value="<?php echo $deskripsi[$i];?>" /></td>
+				<td><input type="hidden" class="style-input " name="mh[]" value='<?php echo $mh[$i];?>' />
+					<input type="text" class="style-input " readonly value='<?php echo number_format($mh[$i],2,",",".");?>' style="width:40px;text-align:right" />
+				</td>				
+				<td><input type="hidden" class="style-input " name="labor[]" value='<?php echo $labor[$i];?>' />
+					<input type="text" class="style-input " readonly value='<?php echo number_format($labor[$i],2,",",".");?>' style="width:60px;text-align:right" />
+				</td>
+				<td><input type="hidden" class="style-input " name="mtrl[]" value='<?php echo $material[$i];?>' />
+					<input type="text" class="style-input " readonly value='<?php echo number_format($material[$i],2,",",".");?>' style="width:60px;text-align:right" />
+				</td>
+				<td><input type="hidden" class="style-input " name="subTotal[]" value='<?php echo $total[$i];?>' />
+					<input type="text" class="style-input " readonly value='<?php echo number_format($total[$i],2,",",".");?>' style="width:80px;text-align:right" />
+				</td>
+			</tr>	  
+				
+		<?php
+					}
+				}		 
+			} 
 		   
 		   /* status SUBMIT, not allowed for editing */
-		   if($statusEstimate != 'APPROVE') {
-			 for($i=$filledRow+1; $i<=9; $i++) {	 	
+			if($statusEstimate != 'APPROVE') 
+			{
+				for($i=$filledRow+1; $i<=9; $i++) 
+				{	 	
 		?>
 		
-		<tr>
-		   <td><input type="checkbox" checked name="chk[]" style="margin-top:8px" />
-			   <input type="hidden" name="status[]" value="NEED REVIEW" />
-		   </td>
-		   <td><input type="text" class="style-input " name="loc[]" style="text-transform:uppercase;" style="width:100px" /></td>
-		   <td><input type="text" class="style-input " name="part[]" style="text-transform:uppercase;" style="width:40px" /></td>
-		   <td><input type="text" class="style-input " name="dmg[]" style="text-transform:uppercase;" style="width:50px" /></td>
-		   <td><input type="text" class="style-input " name="repair[]" style="text-transform:uppercase;" style="width:40px" /></td>
-		   <td><input type="text" class="style-input " name="length[]" onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
-		   <td><input type="text" class="style-input " name="Width[]" onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
-		   <td><input type="text" class="style-input " name="qty[]" onkeypress="return isNumber(event)" style="width:30px;text-align:right" /></td>
-		   <td><select id="party" class="style-select" name="party[]" style="width:40px">
-				 <option value="O">O</option>
-				 <option value="U1">U1</option>
-				 <option value="U2">U2</option>
-				 <option value="T">T</option>
-				</select></td>
-		   <td><input type="text" name="deskripsi[]" class="style-input " readonly value="" /></td>		
-		   <td><input type="text" class="style-input " readonly name="mh[]" style="width:40px;text-align:right" /></td>				
-		   <td><input type="text" class="style-input " readonly name="labor[]" style="width:60px;text-align:right" /></td>
-		   <td><input type="text" class="style-input " readonly name="mtrl[]" style="width:60px;text-align:right" /></td>
-		   <td><input type="text" class="style-input " readonly name="subTotal[]" style="width:80px;text-align:right" /></td>
-		  </tr>
+			<tr>
+				<td><input type="checkbox" checked name="chk[]" style="margin-top:8px" />
+					<input type="hidden" name="status[]" value="NEED REVIEW" />
+				</td>
+				<td><input type="text" class="style-input " name="loc[]" style="text-transform:uppercase;" style="width:100px" /></td>
+				<td><input type="text" class="style-input " name="part[]" style="text-transform:uppercase;" style="width:40px" /></td>
+				<td><input type="text" class="style-input " name="dmg[]" style="text-transform:uppercase;" style="width:50px" /></td>
+				<td><input type="text" class="style-input " name="repair[]" style="text-transform:uppercase;" style="width:40px" /></td>
+				<td><input type="text" class="style-input " name="length[]" onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
+				<td><input type="text" class="style-input " name="Width[]" onkeypress="return isNumber(event)" style="width:40px;text-align:right" /></td>
+				<td><input type="text" class="style-input " name="qty[]" onkeypress="return isNumber(event)" style="width:30px;text-align:right" /></td>
+				<td><select id="party" class="style-select" name="party[]" style="width:40px">
+						<option value="O">O</option>
+						<option value="U1">U1</option>
+						<option value="U2">U2</option>
+						<option value="T">T</option>
+					</select></td>
+				<td><input type="text" name="deskripsi[]" class="style-input " readonly value="" /></td>		
+				<td><input type="text" class="style-input " readonly name="mh[]" style="width:40px;text-align:right" /></td>				
+				<td><input type="text" class="style-input " readonly name="labor[]" style="width:60px;text-align:right" /></td>
+				<td><input type="text" class="style-input " readonly name="mtrl[]" style="width:60px;text-align:right" /></td>
+				<td><input type="text" class="style-input " readonly name="subTotal[]" style="width:80px;text-align:right" /></td>
+			</tr>
 		
 		<?php
+				}
 			}
-		   }
 		?>
 		
-	  </tbody>
-	 </table>
+		</tbody>
+	</table>
 
 </form>
 
 <?php
 	$sql = "select * from RepairMsgLog with (NOLOCK) where estimateID = '$kodeEstimate'; ";
 	$rsl = mssql_query($sql);
-	if ($rsl){
-	  $htmlopen = '';
-	  $htmlcontent ='';
-	  $htmlclose ='';
+	if ($rsl)
+	{
+		$htmlopen = '';
+		$htmlcontent ='';
+		$htmlclose ='';
 	  
-	  $htmlopen = '<textarea name="logEstimate" style="width:100%" rows="8" readonly>';
-	  while ($arrfield = mssql_fetch_array($rsl)){
-		$htmlcontent .= $arrfield['logDTTM'].": ".$arrfield['MessgText'] ."\n";
-	  }	  
-	  $htmlclose = '</textarea>';
+		$htmlopen = '<textarea name="logEstimate" style="width:100%" rows="8" readonly>';
+		while ($arrfield = mssql_fetch_array($rsl))
+		{
+			$htmlcontent .= $arrfield['logDTTM'].": ".$arrfield['MessgText'] ."\n";
+		}	  
+		$htmlclose = '</textarea>';
 	  
-	  if ($htmlcontent <> '') {
-		echo $htmlopen.$htmlcontent.$htmlclose;	  
-	  }	
+		if ($htmlcontent <> '') 
+		{
+			echo $htmlopen.$htmlcontent.$htmlclose;	  
+		}	
 	}
 	mssql_free_result($rsl);
 	
