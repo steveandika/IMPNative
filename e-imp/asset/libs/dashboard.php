@@ -76,8 +76,7 @@
 		}
 		
 		$html .= '<div class="height-5 sub-menu-link"></div></div>';		
-		$html .= '</div>';
-		
+			
 		if (validMenuAccess("32") == 1 || strtoupper($_SESSION["uid"]) == "JOK001" ) 
 		{
 			$html .= '<button class="dropdown-btn">Loader Management<i class="fa fa-caret-down"></i></button>';			
