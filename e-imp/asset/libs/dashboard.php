@@ -26,7 +26,7 @@
 		$html .= '<a href="?p=private" class="menu-link"><span class="menu-label">Change Password</label></a>';
 		$html .= '<div class="height-10"></div>';
 		
-		$html .= '<button class="dropdown-btn border-radius-3">Master Data<i class="fa fa-caret-down"></i></button>';
+		$html .= '<button class="dropdown-btn">Master Data<i class="fa fa-caret-down"></i></button>';
 		$html .= '<div class="dropdown-container"><div class="height-5"></div>';
 		
 		if (in_array(strtoupper($_SESSION['uid']), $masterData)) 
@@ -39,7 +39,7 @@
 		$html .= '<div class="height-5"></div></div>';
 		
 		if(validMenuAccess("32") == 1) {
-			$html .= '<button class="dropdown-btn border-radius-3">Workshop<i class="fa fa-caret-down"></i></button>';
+			$html .= '<button class="dropdown-btn">Workshop<i class="fa fa-caret-down"></i></button>';
 			$html .= '<div class="dropdown-container"><div class="height-5"></div>';
 			$html .= '<a href="?p=gatein" class="sub-menu-link">In Hamparan</a>';
 			$html .= '<a href="'.$defHTML.'/e-imp/mnr/?do=domnr" class="sub-menu-link">M n R</a>';
@@ -61,7 +61,7 @@
 			$html .= '<div class="height-5"></div>';
 	    }
 		
-        $html .= '<button class="dropdown-btn border-radius-3">Reports<i class="fa fa-caret-down"></i></button>';
+        $html .= '<button class="dropdown-btn">Reports<i class="fa fa-caret-down"></i></button>';
 		$html .= '<div class="dropdown-container"><div class="height-5"></div>';
 		//$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/hw_summary.php").'" class="sub-menu-link padding-left-15">Summary Hamparan</a>'; 
         //$html .= '<a href="?p=wsurvey" class="sub-menu-link">Waiting Survey</a>';
@@ -80,7 +80,7 @@
 		
 		if (validMenuAccess("32") == 1 || strtoupper($_SESSION["uid"]) == "JOK001" ) 
 		{
-			$html .= '<button class="dropdown-btn border-radius-3">Loader Management<i class="fa fa-caret-down"></i></button>';			
+			$html .= '<button class="dropdown-btn">Loader Management<i class="fa fa-caret-down"></i></button>';			
 			$html .= '<div class="dropdown-container"><div class="height-5"></div>';   
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadHamparan').'" target="_blank" class="sub-menu-link">L H W</a>';
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadDateApp').'" target="_blank" class="sub-menu-link">Approval, C/R, C/C Date</a>';	   
