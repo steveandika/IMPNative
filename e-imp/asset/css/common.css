@@ -189,6 +189,7 @@
 /*side menu ------*/
 .sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 0px;top: 80px;width: 250px;background-color: #212F3C/*#e1e1d0*/;overflow : auto;left:-250px;}
 .sidenav a, .dropdown-btn{display: block;cursor: pointer;background-color: #212F3C;outline: none;border: none;text-decoration: none;width: 100%;text-align: left;}
+.dropdown-btn{color: #fff;}
 .sidenav a {padding: 2px 0px 2px 5px; }	
 .sidenav a:hover {background-color: #fff;color: #0033cc;}
 .dropdown-btn {padding: 8px 0px 8px 5px;border-bottom: 1px solid #b8b894;}	
