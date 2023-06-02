@@ -27,7 +27,7 @@
 		$html .= '<div class="height-10"></div>';
 		
 		$html .= '<button class="dropdown-btn">Master Data<i class="fa fa-caret-down"></i></button>';
-		$html .= '<div class="dropdown-container"><div class="height-5 sub-menu-link"></div>';
+		$html .= '<div class="dropdown-container">';
 		
 		if (in_array(strtoupper($_SESSION['uid']), $masterData)) 
 		{ 
@@ -36,11 +36,11 @@
 			$html .= '<a href="?p=pr_mnr" class="sub-menu-link padding-left-15">Price List</a>'; 
 			$html .= '<a href="?p=cedexBrowse" class="sub-menu-link padding-left-15">Manage Price List</a>'; 
 		}
-		$html .= '<div class="height-5 sub-menu-link"></div>';
+		$html .= '<div class="height-5 sub-menu-link"></div></div>';
 		
 		if(validMenuAccess("32") == 1) {
 			$html .= '<button class="dropdown-btn">Workshop<i class="fa fa-caret-down"></i></button>';
-			$html .= '<div class="dropdown-container"><div class="height-5"></div>';
+			$html .= '<div class="dropdown-container">';
 			$html .= '<a href="?p=gatein" class="sub-menu-link">In Hamparan</a>';
 			$html .= '<a href="'.$defHTML.'/e-imp/mnr/?do=domnr" class="sub-menu-link">M n R</a>';
 			$html .= '<a href="?p=sitesvy" class="sub-menu-link">Manage Photo/Image</a>';
@@ -51,7 +51,7 @@
 				$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("newmnr/unlockmnr.php").'" class="sub-menu-link" >Open Lock MnR</a>';
 			}
 
-			$html .= '<div class="height-5 sub-menu-link"></div>';			
+			$html .= '<div class="height-5 sub-menu-link"></div></div>';			
 		}
 		
 		if (in_array(strtoupper($_SESSION['uid']), $groupFin))
@@ -62,7 +62,7 @@
 	    }
 		
         $html .= '<button class="dropdown-btn">Reports<i class="fa fa-caret-down"></i></button>';
-		$html .= '<div class="dropdown-container"><div class="height-5 sub-menu-link"></div>';
+		$html .= '<div class="dropdown-container">';
 		//$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/hw_summary.php").'" class="sub-menu-link padding-left-15">Summary Hamparan</a>'; 
         //$html .= '<a href="?p=wsurvey" class="sub-menu-link">Waiting Survey</a>';
 		$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/div-filter-waitingapp.php").'" class="sub-menu-link padding-left-15">Waiting Approval</a>'; 
@@ -75,13 +75,13 @@
 			$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/monitoring-eor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; 
 		}
 		
-		$html .= '<div class="height-5 sub-menu-link"></div>';		
+		$html .= '<div class="height-5 sub-menu-link"></div></div>';		
 		$html .= '</div>';
 		
 		if (validMenuAccess("32") == 1 || strtoupper($_SESSION["uid"]) == "JOK001" ) 
 		{
 			$html .= '<button class="dropdown-btn">Loader Management<i class="fa fa-caret-down"></i></button>';			
-			$html .= '<div class="dropdown-container"><div class="height-5 sub-menu-link"></div>';   
+			$html .= '<div class="dropdown-container">';   
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadHamparan').'" target="_blank" class="sub-menu-link">L H W</a>';
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadDateApp').'" target="_blank" class="sub-menu-link">Approval, C/R, C/C Date</a>';	   
 			$html .= '<div class="height-5"></div>';
@@ -89,7 +89,7 @@
 			$html .= '<div class="height-5 sub-menu-link"></div>';
 		} 
 
-		$html .= '<div class="height-15"></div>';
+		$html .= '<div class="height-15"></div></div>';
 		$html .= '<a href="?eof=1" class="menu-link"><span class="menu-label">Log Out</label></a>';
 		
 		echo $html;
