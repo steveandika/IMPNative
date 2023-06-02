@@ -86,10 +86,10 @@
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadDateApp').'" target="_blank" class="sub-menu-link">Approval, C/R, C/C Date</a>';	   
 			$html .= '<div class="height-5"></div>';
 			$html .= '</div>'; 
-			$html .= '<div class="height-5 sub-menu-link"></div>';
+			$html .= '<div class="height-5 sub-menu-link"></div></div>';
 		} 
 
-		$html .= '<div class="height-15"></div></div>';
+		$html .= '<div class="height-15"></div>';
 		$html .= '<a href="?eof=1" class="menu-link"><span class="menu-label">Log Out</label></a>';
 		
 		echo $html;
