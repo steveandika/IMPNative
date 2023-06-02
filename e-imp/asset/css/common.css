@@ -196,10 +196,10 @@
 .dropdown-btn:hover {color: #fff;background-color:green;}	
 .menu-group-title {display: block;height:25px;line-height:25px;font-weight:600}
 .menu-link {display: block;padding: 6px 0 4px 0;overflow: hidden;text-decoration:0;color: #2874A6;white-space: nowrap;cursor:pointer;background-color: #58d68d;}
-.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 25px;color: #fff/*#2874A6*/;outline: none;padding-left: 10px!important}
+.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 25px;color: #fff/*#2874A6*/;outline: none;padding-left: 10px!important;background-color: #212F3C;}
 .menu-icon {display: block;float: left;width: 50px;height: 40px;line-height: 40px;font-size: 20px;color: red}
 .active {background-color: green;color: white;}	
-.dropdown-container{display: none;background-color: #d6d6c2;}
+.dropdown-container{display: none;background-color: #212F3C/*#d6d6c2*/;}
 .fa-caret-down{float: right;padding-right:8px;padding-top: 3px;}
 
 /*box menu ---------*/
