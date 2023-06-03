@@ -71,13 +71,13 @@
 				
 				function toggleUser() 
 				{		
-					if (document.getElementById("menuUserDiv").style.top == "-80px") 
+					if (document.getElementById("menuUserDiv").style.top == "80px") 
 					{
-						document.getElementById("menuUserDiv").style.top = "80px";	
+						document.getElementById("menuUserDiv").style.top = "-80px";	
 					} 
 					else 
 					{
-						document.getElementById("menuUserDiv").style.top = "-80px";	
+						document.getElementById("menuUserDiv").style.top = "80px";	
 					}		  
 				}				
 
