@@ -10,7 +10,7 @@
 
 <div class="header">
 	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
-	<div class="header-right"><a class="active" href="#user">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></a></div>
+	<div class="header-right"><a class="active" onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></a></div>
 </div>  
   
 <div id="sideBar" class="sidenav padding-top-10 padding-left-10 padding-right-10">
@@ -98,6 +98,10 @@
 		echo $html;
 	?>
    
+</div>
+
+<div id="User" class="logout-div padding-top-10 padding-left-10 padding-right-10 w3-round-large">
+	<a href="#"><span class="menu-label">LogOut</label></a>
 </div>
 
 <?php
