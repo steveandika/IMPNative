@@ -1,0 +1,29 @@
+.logout-div{
+	position: fixed;
+	z-index: 1;
+	transition: 0.5s;
+	overflow-x: hidden;
+	border: 1px solid #CCCCFF;
+	top: 80px;
+	width: 250px;
+	background-color: #F7F9F9;
+	overflow : none;
+	float: right;
+}
+
+.logout-div a{
+	padding: 2px 0px 2px 5px; 
+}	
+
+.logout-div:hover{
+	background-color: #5DADE2;
+	color: #000;
+	border:1px solid #2471A3; 
+	border-radius:4px;	
+}
+
+.menu-label{
+	display:block;
+	height:20px;
+	line-height:25px;
+}	
