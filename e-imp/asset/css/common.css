@@ -188,15 +188,14 @@
 
 /*side menu ------*/
 .sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 0px;top: 80px;width: 250px;background-color: #F7F9F9;overflow : auto;left:-250px;}
-.sidenav a, .dropdown-btn{display: block;cursor: pointer;background-color: #F7F9F9;outline: none;border: none;text-decoration: none;width: 100%;text-align: left;}
-.dropdown-btn{color: #000;}
+.sidenav a, .dropdown-btn{display: block;cursor: pointer;background-color: #F7F9F9;outline: none;border: none;text-decoration: none;width: 100%;text-align: left;color: #000;}
 .sidenav a {padding: 2px 0px 2px 5px; }	
-.sidenav a:hover {background-color: #5DADE2;color: #000; border:1px solid #2471A3; border-radius:4px;}
+.sidenav a:hover {background-color: #5DADE2;color: #000;border:1px solid #2471A3; border-radius:4px;}
 .dropdown-btn {padding: 8px 0px 8px 5px;border-bottom: 1px solid #b8b894;}	
 .dropdown-btn:hover {color: #000;background-color:green;}	
 .menu-group-title {display: block;height:25px;line-height:25px;font-weight:600}
 .menu-link {display: block;padding: 6px 0 4px 0;overflow: hidden;text-decoration:0;color: #2874A6;white-space: nowrap;cursor:pointer;background-color: #F7F9F9;}
-.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 25px;color: #000;outline: none;padding-left: 10px!important;}
+.sub-menu-link {display: block;text-decoration: none!important;white-space: nowrap;cursor: pointer;line-height: 25px;color: #000;outline: none;padding-left: 10px!important;border-radius:4px;}
 .menu-icon {display: block;float: left;width: 50px;height: 40px;line-height: 40px;font-size: 20px;color: red}
 .active {background-color: green;color: white;}	
 .dropdown-container{display: none;background-color: #212F3C/*#d6d6c2*/;}
