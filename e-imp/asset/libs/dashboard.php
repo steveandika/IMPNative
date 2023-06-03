@@ -11,7 +11,7 @@
 <div class="header">
 	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
 	<div class="header-right">
-		<button onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></button>
+		<button class="logo" onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></button>
 	</div>
 </div>  
   
