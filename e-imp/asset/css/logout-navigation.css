@@ -4,15 +4,15 @@
 	transition: 0.5s;
 	overflow-x: hidden;
 	border: 1px solid #CCCCFF;
-	top: 80px;
+	top: 0px;
 	width: 250px;
 	background-color: #F7F9F9;
 	overflow : none;
-	left: 750px;
+	right: 0px;
 }
 
 .logout-div a{
-	padding: 2px 0px 2px 5px; 
+	padding: 10px 0px 10px 5px; 
 }	
 
 .logout-div:hover{
