@@ -11,7 +11,7 @@
 <div class="header">
 	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
 	<div class="header-right">
-		<button class="active" onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></button>
+		<button onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></button>
 	</div>
 </div>  
   
@@ -102,7 +102,7 @@
    
 </div>
 
-<div id="User" class="logout-div padding-top-10 padding-left-10 padding-right-10 w3-round-large">
+<div id="menuUserDiv" class="logout-div padding-top-10 padding-left-10 padding-right-10 w3-round-large">
 	<a href="#"><span class="menu-label">LogOut</label></a>
 </div>
 
