@@ -8,7 +8,7 @@
 	width: 250px;
 	background-color: #F7F9F9;
 	overflow : none;
-	right: -250px;
+	left: 750px;
 }
 
 .logout-div a{
