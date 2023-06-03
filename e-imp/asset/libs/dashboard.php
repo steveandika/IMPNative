@@ -10,7 +10,9 @@
 
 <div class="header">
 	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
-	<div class="header-right"><a class="active" onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></a></div>
+	<div class="header-right">
+		<button class="active" onlick="toggleUser()">User: <b> <?php echo strtoupper($_SESSION['uid']) ?></b></button>
+	</div>
 </div>  
   
 <div id="sideBar" class="sidenav padding-top-10 padding-left-10 padding-right-10">
