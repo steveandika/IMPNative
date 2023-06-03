@@ -6,10 +6,11 @@
 	transition: 0.5s;
 	overflow-x: hidden;
 	border-right: 1px solid #CCCCFF;
-	top: 80px;width: 250px;
+	top: 80px;
+	width: 250px;
 	background-color: #F7F9F9;
 	overflow : auto;
-	left:-250px;
+	left: -250px;
 }
 
 .sidenav a, .dropdown-btn{
@@ -50,6 +51,12 @@
 	height: 25px;
 	line-height: 25px;
 	font-weight: 600
+}
+
+.menu-label{
+	display:block;
+	height:20px;
+	line-height:25px;
 }
 
 .menu-link{
