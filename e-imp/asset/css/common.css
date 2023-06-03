@@ -227,7 +227,6 @@ float: left;height: 30px;padding: 0;width: 100px;cursor: pointer;font: bold 14px
 .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
 .overlay .closebtn {position: absolute;top: 20px;right: 45px;font-size: 20px}
 
-.menu-label{display:block;height:20px;line-height:15px;}
 .toggle_menu{display:block;float:left;width:50px;height:28px;line-height:28px;padding:0;border:0;background:none;text-decoration:none;text-align:center;cursor:pointer;outline:none}
 
 .style-table-bordered{border-collapse:collapse;border-spacing:0;width:100%;display:table;font-family:Roboto,sans-serif;font-size:12px;border:1px solid #ecf0f1}
