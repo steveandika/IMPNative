@@ -17,10 +17,6 @@
 	<?php
         $html = '';
 
-		
-		$html .= '<a href="?eof=1" class="menu-link"><span class="menu-label">Log Out</label></a>';
-		$html .= '<div class="height-15"></div>';
-		
 		if (in_array(strtoupper($_SESSION['uid']), $groupRoot))
 		{ 
 		  $html .= '<a href="?p=personal" class="menu-link"><span class="menu-label">Users Management</label></a>';
@@ -80,7 +76,7 @@
 			$html .= '<a href="'.$defHTML.'/e-imp/1?src='.base64_encode("fr/monitoring-eor.php").'" class="sub-menu-link padding-left-15">Monitoring EoR</a>'; 
 		}
 		
-		$html .= '<div class="height-5 sub-menu-link"></div></div>';		
+		$html .= '<div class="height-5"></div></div>';		
 		$html .= '<button class="dropdown-btn">Loader Management<i class="fa fa-caret-down"></i></button>';
 			
 		if (validMenuAccess("32") == 1 || strtoupper($_SESSION["uid"]) == "JOK001" ) 
@@ -89,12 +85,11 @@
 			$html .= '<div class="dropdown-container">';   
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadHamparan').'" target="_blank" class="sub-menu-link">L H W</a>';
 			$html .= '<a href="/content/dataload?src='.str_rot13('loadDateApp').'" target="_blank" class="sub-menu-link">Approval, C/R, C/C Date</a>';	   
-			$html .= '<div class="height-5"></div>';
-			$html .= '</div>'; 
-			$html .= '<div class="height-5 sub-menu-link"></div></div>';
+			$html .= '<div class="height-5"></div></div>';
 		} 
 
-
+		$html .= '<a href="?eof=1" class="menu-link"><span class="menu-label">Log Out</label></a>';
+		$html .= '<div class="height-15"></div>';
 		
 		echo $html;
 	?>
