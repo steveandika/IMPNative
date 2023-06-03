@@ -187,7 +187,7 @@
 .header-right{float: right;text-decoration: none;}
 
 /*side menu ------*/
-.sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 0px;top: 80px;width: 250px;background-color: #F7F9F9;overflow : auto;left:-250px;}
+.sidenav{height: 94%;position: fixed;z-index: 1;transition: 0.5s;overflow-x: hidden;border-right: 1px solid #CCCCFF;top: 80px;width: 250px;background-color: #F7F9F9;overflow : auto;left:-250px;}
 .sidenav a, .dropdown-btn{display: block;cursor: pointer;background-color: #F7F9F9;outline: none;border: none;text-decoration: none;width: 100%;text-align: left;color: #000;}
 .sidenav a {padding: 2px 0px 2px 5px; }	
 .sidenav a:hover {background-color: #5DADE2;color: #000;border:1px solid #2471A3; border-radius:4px;}
