@@ -68,6 +68,18 @@
 						document.getElementById("sideBar").style.left = "0px";	
 					}		  
 				}
+				
+				function toggleUser() 
+				{		
+					if (document.getElementById("menuUserDiv").style.top == "0px") 
+					{
+						document.getElementById("menuUserDiv").style.top = "80px";	
+					} 
+					else 
+					{
+						document.getElementById("menuUserDiv").style.top = "0px";	
+					}		  
+				}				
 
 			</script>
 		
