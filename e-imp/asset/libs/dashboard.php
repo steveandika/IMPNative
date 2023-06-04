@@ -106,7 +106,7 @@
 <div id="menuUserDiv" class="logout-div padding-top-10 padding-left-10 padding-right-10">
 	<a href="?eof=1" class="thislink"><span class="menu-label">LogOut</label></a>
 </div>
-<div class="height-10"></div>
+<div class="height-20"></div>
 
 
 <?php
