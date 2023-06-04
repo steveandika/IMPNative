@@ -14,9 +14,6 @@
 		<div class="user-menu"><?php echo strtoupper($_SESSION['uid']) ?></div>
 	</div>
 </div>  
-<div class="hide-me">
-	<a href="#" class="menu-link"><span class="menu-label">LogOut</label></a>
-</div>
   
 <div id="sideBar" class="sidenav padding-top-10 padding-left-10 padding-right-10">
 	<?php
