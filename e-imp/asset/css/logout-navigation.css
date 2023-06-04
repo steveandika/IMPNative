@@ -14,7 +14,7 @@
 	padding: 10px 0px 10px 5px; 
 }	
 
-.logout-div:hover{
+.logout-div a:hover{
 	background-color: #5DADE2;
 	color: #fff;
 	border:1px solid #2471A3; 
@@ -23,8 +23,8 @@
 
 .menu-label{
 	display:block;
-	height:20px;
-	line-height:20px;
+	height:18px;
+	line-height:18px;
 }	
 
 .thislink{
