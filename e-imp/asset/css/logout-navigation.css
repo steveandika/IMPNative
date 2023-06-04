@@ -3,13 +3,13 @@
 /*	z-index: 1;*/
 	transition: 0.5s;
 	border: 1px solid #CCCCFF;
-	top: 140px;
+	top: 80px;
 	width: 250px;
 	background-color: #F7F9F9;
 	overflow : none;
 	height: 100px;
 	display: block;
-	float: right;
+	right: 0px;
 }
 
 .logout-div a{
