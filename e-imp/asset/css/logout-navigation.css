@@ -24,7 +24,7 @@
 .menu-label{
 	display:block;
 	height:20px;
-	line-height:25px;
+	line-height:20px;
 }	
 
 .thislink{
@@ -36,5 +36,5 @@
 	color: #fff; /*#2874A6;*/
 	white-space: nowrap;
 	cursor:pointer;
-	background-color: #F7F9F9;
+	background-color: #000; /*#F7F9F9;*/
 }
