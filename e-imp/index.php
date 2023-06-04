@@ -61,8 +61,6 @@
 				
 				function toggleUser() 
 				{	
-					alert("Hi");	
-					alert(document.getElementById("menuUserDiv").style.display);
 					if (document.getElementById("menuUserDiv").style.display == "none") 
 					{
 						document.getElementById("menuUserDiv").style.display = "block";	
