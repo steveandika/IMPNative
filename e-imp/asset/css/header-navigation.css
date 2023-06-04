@@ -44,9 +44,9 @@
 
 .header .user-menu{
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: bold;
 	color: #fff;
-	padding: 10px;
+	padding: 15px 4px 5px 0px;
 	border: none;
 	background-color: #2471a3;
 }	
