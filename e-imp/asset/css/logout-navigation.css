@@ -1,14 +1,12 @@
 .logout-div{
+	display: none;
 	position: fixed;
-/*	z-index: 1;*/
 	transition: 0.5s;
 	border: 1px solid #CCCCFF;
 	top: 75px;
 	width: 250px;
-	background-color: #F7F9F9;
-	overflow : none;
-	height: 100px;
-	display: none;
+	background-color: #000;
+	overflow : none;	
 	right: 0px;
 }
 
@@ -18,7 +16,7 @@
 
 .logout-div:hover{
 	background-color: #5DADE2;
-	color: #000;
+	color: #fff;
 	border:1px solid #2471A3; 
 	border-radius:4px;	
 }
@@ -28,3 +26,15 @@
 	height:20px;
 	line-height:25px;
 }	
+
+.thislink{
+	display: block;
+	padding: 6px 0 4px 0;
+	overflow: hidden;
+	text-decoration: 0;
+	line-height: 25px;
+	color: #fff; /*#2874A6;*/
+	white-space: nowrap;
+	cursor:pointer;
+	background-color: #F7F9F9;
+}
