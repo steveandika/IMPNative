@@ -57,17 +57,7 @@
 					});
 				}
 				
-				function toggleSideNav() 
-				{		
-					if (document.getElementById("sideBar").style.left == "0px") 
-					{
-						document.getElementById("sideBar").style.left = "-250px";	
-					} 
-					else 
-					{
-						document.getElementById("sideBar").style.left = "0px";	
-					}		  
-				}
+
 				
 				function toggleUser() 
 				{	
