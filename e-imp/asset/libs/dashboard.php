@@ -11,7 +11,7 @@
 <div class="header">
 	<button class="logo" onclick="toggleSideNav()">&#9776;</button>
 	<div class="header-right">
-		<button class="user-menu" onclick="toggleUser()"><?php echo strtoupper($_SESSION['uid']) ?></button>
+		<button class="user-menu" onclick="toggleUser()"><?php echo strtoupper($_SESSION['uid']) ?>&nbsp;<i class="fa fa-caret-down"></i></button>
 	</div>
 </div>  
   
@@ -102,9 +102,11 @@
    
 </div>
 
+<div class="height-10"></div>
 <div id="menuUserDiv" class="logout-div padding-top-10 padding-left-10 padding-right-10">
-	<a href="#" class="menu-link"><span class="menu-label">LogOut</label></a>
+	<a href="?eof=1" class="thislink"><span class="menu-label">LogOut</label></a>
 </div>
+<div class="height-10"></div>
 
 
 <?php
