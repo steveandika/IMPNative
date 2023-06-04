@@ -93,9 +93,9 @@
 			$html .= '</div>';
 		} 
 		
-		$html .= '<div class="height-10"></div>';
+		/*$html .= '<div class="height-10"></div>';
 		$html .= '<a href="?eof=1" class="menu-link"><span class="menu-label">Log Out</label></a>';
-		$html .= '<div class="height-10"></div>';
+		$html .= '<div class="height-10"></div>';*/
 		
 		echo $html;
 	?>
@@ -103,7 +103,7 @@
 </div>
 
 <div class="height-10"></div>
-<div id="menuUserDiv" class="logout-div padding-top-10 padding-left-10 padding-right-10">
+<div id="menuUserDiv" class="logout-div padding-top-10 padding-left-10 padding-right-10 padding-bottom-10">
 	<a href="?eof=1" class="thislink"><span class="menu-label">LogOut</label></a>
 </div>
 <div class="height-20"></div>
