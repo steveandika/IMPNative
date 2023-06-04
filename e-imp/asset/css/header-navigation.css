@@ -43,9 +43,11 @@
 }
 
 .header .user-menu{
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 500;
+	color: #fff;
 	padding: 10px;
 	border: none;
+	background-color: #2471a3;
 }	
 	
