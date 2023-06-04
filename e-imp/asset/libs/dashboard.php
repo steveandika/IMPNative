@@ -102,6 +102,10 @@
    
 </div>
 
+<div id="menuUserDiv" class="logout-div padding-top-10 padding-left-10 padding-right-10">
+	<a href="#" class="menu-link"><span class="menu-label">LogOut</label></a>
+</div>
+
 
 <?php
 	if(isset($_GET["p"])) 
