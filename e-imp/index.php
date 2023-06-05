@@ -71,7 +71,7 @@
 				
 				function toggleUser() 
 				{	
-					if (document.getElementById("menuUserDiv").style.display == "none" || document.getElementById("menuUserDiv").style.display == "none") 
+					if (document.getElementById("menuUserDiv").style.display == "none" || document.getElementById("menuUserDiv").style.display == "") 
 					{
 						document.getElementById("menuUserDiv").style.display = "block";	
 					} 
