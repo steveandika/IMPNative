@@ -168,6 +168,18 @@
 				}		  
 			}
 			
+			function toggleUser() 
+			{	
+				if (document.getElementById("menuUserDiv").style.display == "none" || document.getElementById("menuUserDiv").style.display == "") 
+				{
+					document.getElementById("menuUserDiv").style.display = "block";	
+				} 
+				else 
+				{
+					document.getElementById("menuUserDiv").style.display = "none";	
+				}		  
+			}		
+				
 			function dateSeparator(varID) 
 			{
 				var str = document.getElementById(varID).value;
