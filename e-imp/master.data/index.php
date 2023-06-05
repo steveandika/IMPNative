@@ -118,14 +118,24 @@
 					if (document.getElementById("sideBar").style.left == "0px") 
 					{
 						document.getElementById("sideBar").style.left = "-250px";	
-						//document.getElementById("sideBar").style.width = "250px";	
 					} 
 					else 
 					{
 						document.getElementById("sideBar").style.left = "0px";	
-						//document.getElementById("sideBar").style.width = "100%";
 					}		  
 				}
+
+				function toggleUser() 
+				{	
+					if (document.getElementById("menuUserDiv").style.display == "none" || document.getElementById("menuUserDiv").style.display == "") 
+					{
+						document.getElementById("menuUserDiv").style.display = "block";	
+					} 
+					else 
+					{
+						document.getElementById("menuUserDiv").style.display = "none";	
+					}		  
+				}						
 
 				function dateSeparator(varID) 
 				{
